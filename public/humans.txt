@@ -1,0 +1,12 @@
+/* TEAM */
+Owner, hosting and support: Rich
+Location: Corby, Northamptonshire, UK
+Contact: help@studio-key.co.uk
+
+/* SITE */
+Last update: 2026/10/28
+Language: English (UK)
+Standards: HTML5, CSS, vanilla JavaScript, PHP 8
+Font: Satoshi by Indian Type Foundry (Fontshare)
+Icons: Phosphor Icons
+Hosting: green hosting verified by the Green Web Foundation

@@ -101,7 +101,7 @@ But if you want straightforward, honest website hosting with clear pricing and s
 - ✅ Automatic, secure daily backups
 - ✅ Direct support from me, without a call centre
 - ✅ Practical advice tailored to your business
-- ✅ Fast, reliable hosting on a private UK server **[changed from "private Nginx server": the estate is mixed, Rich confirmed 28 Oct]**
+- ✅ Fast, reliable hosting on a private server **[changed from "private Nginx server": the estate is mixed (Rich, 28 Oct). "UK" dropped because the Green Web check shows Hetzner, which has no UK data centres. Rich to confirm where each server sits before "UK" goes back in]**
 
 Keep your existing domain and website. There's no need to start again just to get better hosting.
 

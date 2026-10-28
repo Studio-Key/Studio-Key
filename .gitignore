@@ -1,4 +1,7 @@
 app/secrets.php
-storage/*
-!storage/.gitkeep
+storage/ratelimit/*
+storage/leads/*
+!storage/**/.gitkeep
 .DS_Store
+storage/app.key
+storage/cache-*.css

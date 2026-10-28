@@ -1,0 +1,30 @@
+# Studio Key
+
+> Studio Key is an independent website hosting provider run by Rich, based in Corby, Northamptonshire, serving small businesses across the East Midlands, UK. Rich looks after 110+ business websites with one clear yearly price, free SSL certificates for life, daily backups to Amazon Web Services S3 and direct personal support. Studio Key is a trading name of RMD Trading Limited (company no. 11656826).
+
+Key facts:
+
+- Standard hosting: £119 a year, all-inclusive (free SSL for life, daily AWS S3 backups, uptime monitoring, security patching, free migration of one website, direct support from Rich, no domain protection fees). Renews at the same price.
+- Managed hosting: £450 a year. Everything in Standard, plus WordPress core, plugin and theme updates.
+- Domains (only if registered with Studio Key): .co.uk or .uk £14 a year, .com £22 a year. Customers can keep their existing domain where it is.
+- Changes and fixes to a website: £65 an hour, quoted up front.
+- Not VAT registered: no VAT is added to any price.
+- Free migration of one WordPress or standard PHP/HTML website per plan. Excludes bespoke applications, fixing broken sites, premium licences and redesigns.
+- 30-day money-back guarantee on new hosting plans (hosting fee refunded in full; domain fees excluded).
+- Cancel any time with one month's notice; unused full months refunded; a full website backup provided free.
+- Green hosting, verified by the Green Web Foundation (hosted by Hetzner Online GmbH).
+- Areas served: Corby, Kettering, Wellingborough, Northampton, Market Harborough, Oakham, Stamford, Leicester, Peterborough and the wider East Midlands.
+- Rich also designs, builds and maintains websites for local businesses.
+- Contact: phone and WhatsApp 07356 171658, email help@studio-key.co.uk. Replies the same day or the next working day, Monday to Friday, 9am to 5pm.
+
+## Pages
+
+- [Home](https://www.studio-key.co.uk/): what Studio Key does, how moving a website works, reviews and common questions
+- [Pricing](https://www.studio-key.co.uk/pricing/): both plans, domain prices, who looks after what, terms summary and pricing FAQs
+- [About](https://www.studio-key.co.uk/about/): Rich, how he works and the areas he serves
+- [Contact](https://www.studio-key.co.uk/contact/): enquiry form, phone, WhatsApp and email
+
+## Optional
+
+- [Hosting terms](https://www.studio-key.co.uk/terms/): billing, refunds, cancellation and migration scope in plain English
+- [Privacy and cookies](https://www.studio-key.co.uk/privacy/): how personal data is handled

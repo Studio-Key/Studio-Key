@@ -88,7 +88,7 @@ Approved (true, evidenced):
 - No hidden costs. Prices as in section 3.
 - Direct support from Rich, no call centre.
 - Free migration. Keep your existing domain and website.
-- Private UK server. (Do not say "Nginx" in public copy: the estate is mixed.)
+- Private server, managed by Rich. (Do not say "Nginx" or "UK" in public copy: the estate is mixed and the main site sits on Hetzner, which has no UK data centres. Rich to confirm.)
 - Green hosting, verified by the Green Web Foundation (live badge: `https://app.greenweb.org/api/v3/greencheckimage/www.studio-key.co.uk?nocache=true`, links to the Green Web Check).
 - 5-star Google reviews (three reviews in PRD 8.1; no count until Rich supplies it).
 - Free migration, scope as PRD 7.1. Most moves go unnoticed by visitors (never "zero downtime").
