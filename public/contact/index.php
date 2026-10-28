@@ -21,6 +21,11 @@ include APP . '/partials/header.php';
       <p class="eyebrow"><?= icon('chat-circle-text') ?> Contact</p>
       <h1 class="h1" id="contact-title">Let's see what would work for you</h1>
       <p class="lead">Moving a website, starting from scratch, or after a second opinion on what you pay now? Tell me a little and I'll reply today or the next working day.</p>
+    </div>
+    <div class="enquiry-wrap__form glass">
+      <?php include APP . '/partials/enquiry-form.php'; ?>
+    </div>
+    <div class="enquiry-wrap__more">
       <div class="person">
         <span class="person__avatar" aria-hidden="true">R</span>
         <span><strong>Rich</strong><span><?= e(cfg('hours')) ?></span></span>
@@ -32,9 +37,6 @@ include APP . '/partials/header.php';
         <li><a href="mailto:<?= e(cfg('email')) ?>" data-contact="email" data-cta="contact-email"><?= icon('envelope-simple') ?> <?= e(cfg('email')) ?></a></li>
         <li class="contact-list__area"><?= icon('map-pin') ?> <?= e(cfg('area_line')) ?></li>
       </ul>
-    </div>
-    <div class="enquiry-wrap__form glass">
-      <?php include APP . '/partials/enquiry-form.php'; ?>
     </div>
   </div>
 </section>

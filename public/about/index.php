@@ -55,7 +55,6 @@ include APP . '/partials/header.php';
       <h2 class="h3" id="also-title">I also build websites</h2>
       <p class="lead--dark">Hosting is what I do most, but I also design, build and look after websites for local businesses. If your site needs more than a new home, I can help with that too.</p>
       <p><a class="link-quiet" href="/contact/?need=new#enquiry" data-cta="about-build">Talk to me about a new website <?= icon('arrow-right') ?></a></p>
-      <?php $quote = 'ryan-young'; include APP . '/partials/quote.php'; ?>
     </aside>
   </div>
 </section>
@@ -93,11 +92,21 @@ include APP . '/partials/header.php';
       <h2 class="h2" id="areas-title">Website hosting across the East Midlands</h2>
       <p class="lead lead--dark">I'm based in Corby and look after businesses across Northamptonshire and the surrounding counties. Further afield? Happy to help over the phone.</p>
     </header>
-    <ul class="towns">
-      <?php foreach (cfg('towns') as $town): ?>
-        <li><?= icon('map-pin') ?> <?= e($town) ?></li>
-      <?php endforeach; ?>
-    </ul>
+    <div class="areas">
+      <ul class="towns">
+        <?php foreach (cfg('towns') as $town): ?>
+          <li><?= icon('map-pin') ?> <?= e($town) ?></li>
+        <?php endforeach; ?>
+      </ul>
+      <aside class="areas__card">
+        <span class="promise__icon"><?= icon('handshake') ?></span>
+        <div>
+          <h3 class="h4">Local means you can meet me</h3>
+          <p>Clients nearby can sit down with me to get set up. Everywhere else, I work by phone, Teams or Zoom, and it works as smoothly.</p>
+          <a class="link-quiet" href="/contact/" data-cta="areas-contact">Arrange a chat <?= icon('arrow-right') ?></a>
+        </div>
+      </aside>
+    </div>
   </div>
 </section>
 

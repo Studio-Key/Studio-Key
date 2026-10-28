@@ -20,8 +20,8 @@ include APP . '/partials/header.php';
     <p class="lead">I've rebuilt this website, so some old links point nowhere. One of these should get you where you need to be.</p>
     <div class="not-found__links">
       <a class="btn btn--primary" href="/" data-cta="404-home">Home page</a>
-      <a class="btn btn--light" href="/pricing/" data-cta="404-pricing">Pricing</a>
-      <a class="btn btn--light" href="/contact/" data-cta="404-contact">Contact me</a>
+      <a class="link-quiet" href="/pricing/" data-cta="404-pricing">See my prices <?= icon('arrow-right') ?></a>
+      <a class="link-quiet" href="/contact/" data-cta="404-contact">Contact me <?= icon('arrow-right') ?></a>
     </div>
   </div>
 </section>

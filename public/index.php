@@ -173,9 +173,9 @@ include APP . '/partials/header.php';
         <div><dt><?= icon('truck') ?> Free migration</dt><dd>I move one website per plan for you, files, database and all, and check your email still works.</dd></div>
         <div><dt><?= icon('arrow-counter-clockwise') ?> 30-day money-back</dt><dd>Not happy in the first 30 days? I refund your hosting fee in full.</dd></div>
         <div><dt><?= icon('door-open') ?> Easy to leave</dt><dd>One month's notice, unused months refunded, and a full backup of your site to take with you.</dd></div>
-        <div><dt><?= icon('shield-check') ?> Clear responsibilities</dt><dd>I look after the server, security, SSL and backups. <a href="/pricing/#who-does-what">See who does what</a>.</dd></div>
+        <div><dt><?= icon('shield-check') ?> Clear responsibilities</dt><dd>I look after the server, security, SSL and backups. <a class="nowrap" href="/pricing/#who-does-what">See who does what</a>.</dd></div>
       </dl>
-      <?php $quote = 'tejal-prajapati'; include APP . '/partials/quote.php'; ?>
+      <p class="seal"><span class="seal__badge" aria-hidden="true"><?= icon('seal-check') ?></span><span><strong>30-day money-back guarantee</strong> on every new hosting plan. If it's not right, you get your hosting fee back.</span></p>
     </div>
   </div>
 </section>
@@ -195,6 +195,11 @@ include APP . '/partials/header.php';
     <header class="split__side reveal">
       <h2 class="h2" id="faq-title">Questions people ask before they move</h2>
       <p class="lead lead--dark">Something else on your mind? <a href="tel:<?= e(cfg('phone_e164')) ?>" data-contact="phone">Call me</a> or <a href="<?= e(cfg('whatsapp')) ?>" rel="noopener" target="_blank" data-contact="whatsapp">send a WhatsApp</a>.</p>
+      <div class="mini-person">
+        <span class="person__avatar" aria-hidden="true">R</span>
+        <span><strong>Ask me directly</strong><span>Usually a same-day reply</span></span>
+        <a class="btn btn--ghost btn--sm" href="tel:<?= e(cfg('phone_e164')) ?>" data-contact="phone" data-cta="faq-call"><?= icon('phone') ?> <?= e(cfg('phone_display')) ?></a>
+      </div>
     </header>
     <div class="split__main">
       <?php include APP . '/partials/faq.php'; ?>
@@ -207,19 +212,20 @@ include APP . '/partials/header.php';
     <div class="enquiry-wrap__intro reveal">
       <h2 class="h2" id="enquiry-title">Tell me what you need</h2>
       <p class="lead">Moving an existing site or starting from scratch, I'll tell you what I'd do and what it costs. No obligation, no hard sell.</p>
+    </div>
+    <div class="enquiry-wrap__form glass">
+      <?php include APP . '/partials/enquiry-form.php'; ?>
+    </div>
+    <div class="enquiry-wrap__more">
       <div class="person">
         <span class="person__avatar" aria-hidden="true">R</span>
         <span><strong>Rich</strong><span>I reply today or the next working day</span></span>
       </div>
-      <?php $quote = 'timothy-lyons'; include APP . '/partials/quote.php'; ?>
       <ul class="contact-list">
         <li><a href="tel:<?= e(cfg('phone_e164')) ?>" data-contact="phone" data-cta="enquiry-call"><?= icon('phone') ?> <?= e(cfg('phone_display')) ?></a></li>
         <li><a href="<?= e(cfg('whatsapp')) ?>" rel="noopener" target="_blank" data-contact="whatsapp" data-cta="enquiry-whatsapp"><?= icon('whatsapp-logo') ?> WhatsApp me</a></li>
         <li><a href="mailto:<?= e(cfg('email')) ?>" data-contact="email" data-cta="enquiry-email"><?= icon('envelope-simple') ?> <?= e(cfg('email')) ?></a></li>
       </ul>
-    </div>
-    <div class="enquiry-wrap__form glass">
-      <?php include APP . '/partials/enquiry-form.php'; ?>
     </div>
   </div>
 </section>

@@ -3,12 +3,12 @@
   <li class="trust__item">
     <a class="trust__link" href="<?= e(cfg('green_check_url')) ?>" rel="noopener" target="_blank" data-cta="trust-green">
       <?= icon('leaf', 'icon trust__icon') ?>
-      <span><strong>Green hosting</strong> Verified by the Green Web Foundation</span>
+      <span><strong>Green hosting</strong> Verified by Green Web Foundation</span>
     </a>
   </li>
   <li class="trust__item">
     <?= icon('google-logo', 'icon trust__icon') ?>
-    <span><span class="stars stars--sm" aria-hidden="true"><?= str_repeat(icon('star-fill', 'icon star'), 5) ?></span><strong>5-star Google reviews</strong></span>
+    <span><strong>5-star Google reviews</strong><span class="stars stars--sm" role="img" aria-label="5 out of 5 stars"><?= str_repeat(icon('star-fill', 'icon star'), 5) ?></span></span>
   </li>
   <li class="trust__item">
     <?= icon('cloud-check', 'icon trust__icon') ?>

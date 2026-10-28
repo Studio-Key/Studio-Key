@@ -44,6 +44,7 @@ if ($plan !== '' && $pre === '') {
 
   <fieldset class="step is-current" data-step="1">
     <legend class="step__title">What would help?</legend>
+    <p class="field__error" data-error-for="need" hidden></p>
     <div class="choices">
       <?php foreach (form_needs() as $value => $opt): ?>
         <label class="choice">
@@ -56,7 +57,6 @@ if ($plan !== '' && $pre === '') {
         </label>
       <?php endforeach; ?>
     </div>
-    <p class="field__error" data-error-for="need" hidden></p>
   </fieldset>
 
   <fieldset class="step" data-step="2">

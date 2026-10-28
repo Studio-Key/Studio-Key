@@ -143,6 +143,7 @@
   /* ---------- FAQ and review expands ---------- */
   d.addEventListener('toggle', (e) => {
     const el = e.target;
+    if (el.dataset && el.dataset.reviewFull && e.newState === 'open') { track('review_expand', { id: el.dataset.reviewFull }); return; }
     if (!(el instanceof HTMLDetailsElement) || !el.open) return;
     if (el.dataset.faq) track('faq_open', { id: el.dataset.faq });
     const review = el.closest('[data-review]');

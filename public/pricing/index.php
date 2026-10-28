@@ -168,6 +168,11 @@ include APP . '/partials/header.php';
     <header class="split__side">
       <h2 class="h2" id="pfaq-title">Pricing questions</h2>
       <p class="lead lead--dark">Anything I haven't covered? <a href="tel:<?= e(cfg('phone_e164')) ?>" data-contact="phone">Call me</a> and ask.</p>
+      <div class="mini-person">
+        <span class="person__avatar" aria-hidden="true">R</span>
+        <span><strong>Ask me directly</strong><span>Usually a same-day reply</span></span>
+        <a class="btn btn--ghost btn--sm" href="tel:<?= e(cfg('phone_e164')) ?>" data-contact="phone" data-cta="faq-call"><?= icon('phone') ?> <?= e(cfg('phone_display')) ?></a>
+      </div>
     </header>
     <div class="split__main">
       <?php include APP . '/partials/faq.php'; ?>
