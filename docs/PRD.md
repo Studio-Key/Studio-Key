@@ -105,6 +105,8 @@ But if you want straightforward, honest website hosting with clear pricing and s
 
 Keep your existing domain and website. There's no need to start again just to get better hosting.
 
+Build note: the emoji in the two lists show as matching Phosphor line icons (same meaning and colour coding: £ and cross for problems, warning for risks, tick for solutions). The words are unchanged. Emoji render differently on every device and clashed with the rest of the icon set.
+
 ### Copy flags (Rich to decide, build uses the locked text until then)
 
 1. "£79+" stays as written (Rich confirmed 28 Oct). The £178 renewal-notice example can support it in an FAQ.
@@ -224,6 +226,7 @@ Research, Oct 2026: there is no reliable published test comparing "See options" 
 |---|---|---|
 | Primary (one style, used everywhere) | **See your options** | `/contact/` step 1, which shows the options as one-tap cards |
 | Secondary (quiet text link) | See my prices | `/pricing/` |
+| Plan buttons on Pricing | Choose Standard / Choose Managed | `/contact/?plan=standard` (form shows the chosen plan) |
 | Contextual (inside sections, same quiet style) | Get a free hosting check / Moving from another host? | Form with the matching step 1 card preselected (`?need=check`, `?need=move`) |
 | Contact links | Call me / WhatsApp me / Send me a message | `tel:`, `wa.me`, form |
 
@@ -432,6 +435,12 @@ WCAG 2.2 AA. Contrast 4.5:1 body, 3:1 large text and UI. Labelled fields, error 
 | 9. Referrals | Ask after a quick fix or a smooth move. Google review request link (later phase) |
 
 ## 16. Open items for Rich
+
+New from the build (28 Oct):
+- Server location: the Green Web check shows Hetzner (Germany/Finland, no UK data centres). Copy now says "private server". Confirm before any "UK" claim goes back.
+- Hosting terms page (`/terms/`) is a plain-English draft. Have it checked before launch.
+- Business names for the three reviewers, if they're happy to be named with their business.
+
 
 Blocking design:
 1. studio-key.co.uk returns 403 to this build environment. The block comes from the site's own server firewall (cPanel, LiteSpeed, QUIC.cloud), not the session's network settings. Either whitelist the environment for an hour, or send hex codes, the logo SVG and a full-page screenshot.
