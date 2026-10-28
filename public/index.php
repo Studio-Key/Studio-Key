@@ -139,7 +139,7 @@ include APP . '/partials/header.php';
         <p>From then on, you have my number. No tickets, no queue, and the same person every time.</p>
       </li>
     </ol>
-    <p class="aside-note reveal"><?= icon('sparkle') ?> <span><strong>New to hosting?</strong> I'll set up your hosting, SSL and email from scratch, and explain each part in plain English as we go. <a href="/contact/?need=new#enquiry" data-cta="how-new">Start here</a>.</span></p>
+    <p class="aside-note reveal"><?= icon('sparkle') ?> <span><strong>New to hosting?</strong> I'll set up your hosting, SSL and email from scratch, and explain each part in plain English as I go. <a href="/contact/?need=new#enquiry" data-cta="how-new">Start here</a>.</span></p>
   </div>
 </section>
 

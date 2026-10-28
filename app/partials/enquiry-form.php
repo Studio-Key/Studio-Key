@@ -83,7 +83,7 @@ $status = is_string($_GET['status'] ?? null) ? $_GET['status'] : '';
         <legend>Do you need the website built too?</legend>
         <div class="segmented">
           <label><input type="radio" name="build" value="yes"><span>Yes</span></label>
-          <label><input type="radio" name="build" value="no" checked><span>No, just hosting</span></label>
+          <label><input type="radio" name="build" value="no" checked><span>No, hosting only</span></label>
         </div>
       </fieldset>
     </div>

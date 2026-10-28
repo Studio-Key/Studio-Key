@@ -1,6 +1,8 @@
 # File plan and architecture
 
-No build step. PHP 8.x includes for shared parts, one CSS file, three small vanilla JS files. Upload and it runs.
+No build step. PHP 8.x includes for shared parts, one CSS file (inlined and minified at runtime, cached in storage), two small vanilla JS files. Upload and it runs.
+
+As built (28 Oct 2026): see `docs/deploy.md` for running locally and going live.
 
 ## 1. Tree
 
@@ -51,9 +53,8 @@ Studio-Key/
 │   ├── favicon.svg, favicon.ico, apple-touch-icon.png
 │   └── assets/
 │       ├── css/site.css          Tokens, base, layout, components, utilities (one file)
-│       ├── js/main.js            Nav toggle, video play, UTM capture, sticky bar
+│       ├── js/main.js            Consent banner, consent-gated event layer (dataLayer + optional beacon), GA4 loader, UTM capture, sticky bar, menu fallback
 │       ├── js/form.js            Step logic, validation, fetch submit
-│       ├── js/track.js           Consent-gated event layer (dataLayer + optional beacon)
 │       ├── fonts/                Satoshi-Variable.woff2, Satoshi-VariableItalic.woff2
 │       ├── img/                  logo.svg, rich.webp, og.jpg, logos/*.svg, video-poster.webp
 │       └── video/                sales-letter.mp4, sales-letter.en.vtt
@@ -92,7 +93,7 @@ One place for anything that appears in more than one spot: business name, legal 
 
 - No frameworks, no libraries. ES modules with `defer`. Target under 20 KB total.
 - Site works with JS off: nav is a plain list, form submits as one page, FAQs use `<details>`.
-- `track.js` loads but does nothing until consent is given.
+- The event layer in `main.js` does nothing until consent is given.
 
 ## 5. Security
 

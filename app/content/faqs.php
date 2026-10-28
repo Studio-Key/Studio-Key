@@ -17,7 +17,7 @@ return [
         ],
         'first-time' => [
             'q' => 'I\'ve never had website hosting before. Can you help?',
-            'a' => 'Yes. I\'ll set up your hosting, SSL certificate and email, and help you pick and register a domain if you don\'t have one. I explain each part in plain English as we go, so you know what you own and what you pay for.',
+            'a' => 'Yes. I\'ll set up your hosting, SSL certificate and email, and help you pick and register a domain if you don\'t have one. I explain each part in plain English as I go, so you know what you own and what you pay for.',
         ],
         'something-breaks' => [
             'q' => 'What happens if something goes wrong with my website?',

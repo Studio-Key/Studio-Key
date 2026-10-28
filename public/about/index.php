@@ -68,7 +68,7 @@ include APP . '/partials/header.php';
     <ul class="values">
       <li>
         <span class="promise__icon"><?= icon('handshake') ?></span>
-        <div><h3 class="h4">In person or on a call</h3><p>Local clients can meet me face to face to get set up. Everyone else, a phone, Teams or Zoom call works just as well.</p></div>
+        <div><h3 class="h4">In person or on a call</h3><p>Local clients can meet me face to face to get set up. Everyone else, a phone, Teams or Zoom call works as well.</p></div>
       </li>
       <li>
         <span class="promise__icon"><?= icon('test-tube') ?></span>

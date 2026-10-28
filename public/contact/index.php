@@ -20,7 +20,7 @@ include APP . '/partials/header.php';
     <div class="enquiry-wrap__intro">
       <p class="eyebrow"><?= icon('chat-circle-text') ?> Contact</p>
       <h1 class="h1" id="contact-title">Let's see what would work for you</h1>
-      <p class="lead">Moving a website, starting from scratch, or just want a second opinion on what you pay now? Tell me a little and I'll reply today or the next working day.</p>
+      <p class="lead">Moving a website, starting from scratch, or after a second opinion on what you pay now? Tell me a little and I'll reply today or the next working day.</p>
       <div class="person">
         <span class="person__avatar" aria-hidden="true">R</span>
         <span><strong>Rich</strong><span><?= e(cfg('hours')) ?></span></span>
