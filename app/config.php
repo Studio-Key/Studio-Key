@@ -54,8 +54,9 @@ return [
             'monthly'  => '£37.50 a month',
             'tag'      => 'Hands-off',
             'summary'  => 'Everything in Standard, and I keep your WordPress site up to date for you.',
+            'lead'     => 'Everything in Standard, plus:',
+            'fit'      => 'Best if you\'d rather never think about updates.',
             'features' => [
-                'Everything in Standard',
                 'WordPress core updates',
                 'Plugin and theme updates',
                 'Update checks so nothing breaks quietly',

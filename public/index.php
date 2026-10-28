@@ -96,8 +96,8 @@ include APP . '/partials/header.php';
           <li><span class="li-icon li-icon--pain"><?= icon('currency-gbp') ?></span> Paying more than you should for hosting</li>
           <li><span class="li-icon li-icon--pain"><?= icon('x-circle') ?></span> Confusing website management and unclear charges</li>
           <li><span class="li-icon li-icon--pain"><?= icon('x-circle') ?></span> Feeling like you have no ownership of your website</li>
-          <li><span class="li-icon li-icon--warn"><?= icon('warning') ?></span> Unreliable or missing backups</li>
-          <li><span class="li-icon li-icon--warn"><?= icon('warning') ?></span> Slow, impersonal customer support</li>
+          <li><span class="li-icon li-icon--pain"><?= icon('warning') ?></span> Unreliable or missing backups</li>
+          <li><span class="li-icon li-icon--pain"><?= icon('warning') ?></span> Slow, impersonal customer support</li>
         </ul>
       </div>
       <div class="compare__col compare__col--good glass reveal" data-section="solutions">

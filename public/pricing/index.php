@@ -50,8 +50,8 @@ $duties = [
     ['Domain renewal, if registered with me', 'me', 'me'],
 ];
 $cell = static fn (string $who) => $who === 'me'
-    ? '<span class="yes">' . icon('check-circle') . ' Me</span>'
-    : 'You, or me at ' . money(cfg('hourly')) . '/hr';
+    ? '<span class="yes">' . icon('check-circle') . ' <span class="duty-me">Me</span></span>'
+    : '<span class="duty-long">You, or me at ' . money(cfg('hourly')) . '/hr</span><span class="duty-short">You or ' . money(cfg('hourly')) . '/hr</span>';
 
 include APP . '/partials/head.php';
 include APP . '/partials/header.php';
@@ -77,11 +77,15 @@ include APP . '/partials/header.php';
           <p class="plan__summary"><?= e($p['summary']) ?></p>
           <p class="price"><span class="price__amount"><?= money($p['price']) ?></span><span class="price__per">a year</span></p>
           <p class="price__sub">That's <?= e($p['monthly']) ?>. Billed yearly in advance. Renews at <?= money($p['price']) ?>.</p>
-          <ul class="ticks">
-            <?php foreach ($p['features'] as $f): ?>
-              <li><?= icon('check') ?> <?= e($f) ?></li>
-            <?php endforeach; ?>
-          </ul>
+          <div class="plan__list">
+            <?php if (!empty($p['lead'])): ?><p class="plan__lead"><?= e($p['lead']) ?></p><?php endif; ?>
+            <ul class="ticks">
+              <?php foreach ($p['features'] as $f): ?>
+                <li><?= icon('check') ?> <?= e($f) ?></li>
+              <?php endforeach; ?>
+            </ul>
+            <?php if (!empty($p['fit'])): ?><p class="plan__fit"><?= icon('lightbulb') ?> <?= e($p['fit']) ?></p><?php endif; ?>
+          </div>
           <a class="btn <?= $key === 'standard' ? 'btn--primary' : 'btn--ghost' ?> btn--block" href="/contact/?plan=<?= e($key) ?>#enquiry" data-cta="plan-<?= e($key) ?>">Choose <?= e($p['name']) ?> <?= icon('arrow-right') ?></a>
         </article>
       <?php endforeach; ?>
