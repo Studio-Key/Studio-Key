@@ -2,7 +2,7 @@
 defined('SK_APP') || exit;
 $reviews = require APP . '/content/reviews.php';
 ?>
-<div class="reviews" role="region" aria-label="Google reviews" tabindex="0">
+<div class="reviews">
   <?php foreach ($reviews as $slug => $r): ?>
     <figure class="review" data-review="<?= e($slug) ?>">
       <div class="stars" role="img" aria-label="5 out of 5 stars"><?= str_repeat(icon('star-fill', 'icon star'), 5) ?></div>
