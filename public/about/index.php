@@ -93,19 +93,16 @@ include APP . '/partials/header.php';
       <p class="lead lead--dark">I'm based in Corby and look after businesses across Northamptonshire and the surrounding counties. Further afield? Happy to help over the phone.</p>
     </header>
     <div class="areas">
-      <ul class="towns">
-        <?php foreach (cfg('towns') as $town): ?>
-          <li><?= icon('map-pin') ?> <?= e($town) ?></li>
-        <?php endforeach; ?>
-      </ul>
-      <aside class="areas__card">
-        <span class="promise__icon"><?= icon('handshake') ?></span>
-        <div>
-          <h3 class="h4">Local means you can meet me</h3>
-          <p>Clients nearby can sit down with me to get set up. Everywhere else, I work by phone, Teams or Zoom, and it works as smoothly.</p>
-          <a class="link-quiet" href="/contact/" data-cta="areas-contact">Arrange a chat <?= icon('arrow-right') ?></a>
-        </div>
-      </aside>
+      <figure class="areas__map"><svg class="map" viewBox="0 0 660 440" role="img" aria-labelledby="map-title"><title id="map-title">Map of the towns I serve around Corby: Corby, Kettering, Wellingborough, Northampton, Market Harborough, Oakham, Stamford, Leicester, Peterborough</title><circle cx="330" cy="204" r="150" class="map__glow"/><line x1="330" y1="204" x2="316" y2="275" class="map__line"/><line x1="330" y1="204" x2="335" y2="353" class="map__line"/><line x1="330" y1="204" x2="234" y2="400" class="map__line"/><line x1="330" y1="204" x2="224" y2="212" class="map__line"/><line x1="330" y1="204" x2="316" y2="63" class="map__line"/><line x1="330" y1="204" x2="436" y2="79" class="map__line"/><line x1="330" y1="204" x2="124" y2="87" class="map__line"/><line x1="330" y1="204" x2="551" y2="142" class="map__line"/><circle cx="330" cy="204" r="14" class="map__pin-ring"/><circle cx="330" cy="204" r="7" class="map__pin"/><text x="352" y="211" class="map__label map__label--home">Corby</text><circle cx="316" cy="275" r="5" class="map__dot"/><text x="328" y="281" text-anchor="start" class="map__label">Kettering</text><circle cx="335" cy="353" r="5" class="map__dot"/><text x="347" y="359" text-anchor="start" class="map__label">Wellingborough</text><circle cx="234" cy="400" r="5" class="map__dot"/><text x="246" y="406" text-anchor="start" class="map__label">Northampton</text><circle cx="224" cy="212" r="5" class="map__dot"/><text x="212" y="218" text-anchor="end" class="map__label">Market Harborough</text><circle cx="316" cy="63" r="5" class="map__dot"/><text x="304" y="69" text-anchor="end" class="map__label">Oakham</text><circle cx="436" cy="79" r="5" class="map__dot"/><text x="448" y="85" text-anchor="start" class="map__label">Stamford</text><circle cx="124" cy="87" r="5" class="map__dot"/><text x="136" y="93" text-anchor="start" class="map__label">Leicester</text><circle cx="551" cy="142" r="5" class="map__dot"/><text x="539" y="148" text-anchor="end" class="map__label">Peterborough</text></svg></figure>
+      <div class="areas__list">
+        <h3 class="h4">Towns I look after websites in</h3>
+        <ul class="town-list">
+          <?php foreach (cfg('towns') as $town): ?>
+            <li><?= icon('map-pin') ?> <?= e($town) ?></li>
+          <?php endforeach; ?>
+        </ul>
+        <p>Not on the list? I host websites for businesses across the UK. <a href="/contact/" data-cta="areas-contact">Get in touch</a>.</p>
+      </div>
     </div>
   </div>
 </section>

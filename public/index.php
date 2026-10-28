@@ -175,16 +175,21 @@ include APP . '/partials/header.php';
         <div><dt><?= icon('door-open') ?> Easy to leave</dt><dd>One month's notice, unused months refunded, and a full backup of your site to take with you.</dd></div>
         <div><dt><?= icon('shield-check') ?> Clear responsibilities</dt><dd>I look after the server, security, SSL and backups. <a class="nowrap" href="/pricing/#who-does-what">See who does what</a>.</dd></div>
       </dl>
-      <p class="seal"><span class="seal__badge" aria-hidden="true"><?= icon('seal-check') ?></span><span><strong>30-day money-back guarantee</strong> on every new hosting plan. If it's not right, you get your hosting fee back.</span></p>
+      <p class="rich-note"><span class="person__avatar" aria-hidden="true">R</span><span>&ldquo;If you're better off staying where you are, I'll tell you.&rdquo;<span>Rich</span></span></p>
     </div>
   </div>
 </section>
 
 <section class="section section--paper" data-section="testimonials" aria-labelledby="reviews-title">
   <div class="container">
-    <header class="section-head reveal">
-      <p class="eyebrow eyebrow--dark"><?= icon('google-logo') ?> Google reviews</p>
-      <h2 class="h2" id="reviews-title">Five stars on Google, in clients' own words</h2>
+    <header class="section-head section-head--split reveal">
+      <div>
+        <p class="eyebrow eyebrow--dark"><?= icon('google-logo') ?> Google reviews</p>
+        <h2 class="h2" id="reviews-title">Five stars on Google, in clients' own words</h2>
+      </div>
+      <?php if (cfg('reviews_url') !== ''): ?>
+        <a class="link-quiet" href="<?= e(cfg('reviews_url')) ?>" rel="noopener" target="_blank" data-cta="reviews-google">See them on Google <?= icon('arrow-up-right') ?></a>
+      <?php endif; ?>
     </header>
     <?php include APP . '/partials/reviews.php'; ?>
   </div>
@@ -219,13 +224,18 @@ include APP . '/partials/header.php';
     <div class="enquiry-wrap__more">
       <div class="person">
         <span class="person__avatar" aria-hidden="true">R</span>
-        <span><strong>Rich</strong><span>I reply today or the next working day</span></span>
+        <span><strong>Rich</strong><span><?= e(cfg('hours')) ?></span></span>
       </div>
       <ul class="contact-list">
         <li><a href="tel:<?= e(cfg('phone_e164')) ?>" data-contact="phone" data-cta="enquiry-call"><?= icon('phone') ?> <?= e(cfg('phone_display')) ?></a></li>
         <li><a href="<?= e(cfg('whatsapp')) ?>" rel="noopener" target="_blank" data-contact="whatsapp" data-cta="enquiry-whatsapp"><?= icon('whatsapp-logo') ?> WhatsApp me</a></li>
         <li><a href="mailto:<?= e(cfg('email')) ?>" data-contact="email" data-cta="enquiry-email"><?= icon('envelope-simple') ?> <?= e(cfg('email')) ?></a></li>
       </ul>
+      <ol class="mini-steps">
+        <li><span><strong>I reply</strong> by email, phone or WhatsApp, whichever you pick.</span></li>
+        <li><span><strong>A quick chat</strong> about your website, email and domain.</span></li>
+        <li><span><strong>A clear answer:</strong> what I'd do, what it costs and when.</span></li>
+      </ol>
     </div>
   </div>
 </section>

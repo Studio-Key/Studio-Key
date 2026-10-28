@@ -6,7 +6,7 @@
         <a href="/" class="site-footer__logo" aria-label="Studio Key home"><?php include APP . '/partials/logo.svg.php'; ?></a>
         <p>Personal website hosting from Rich. <?= e(cfg('area_line')) ?>.</p>
         <a class="green-badge" href="<?= e(cfg('green_check_url')) ?>" rel="noopener" target="_blank" data-cta="footer-green">
-          <img src="/assets/img/logos/green-web-foundation.png" width="200" height="95" alt="This website runs on green hosting, verified by the Green Web Foundation" loading="lazy" decoding="async">
+          <img src="/assets/img/logos/green-web-foundation.png" width="200" height="95" alt="This website runs on green hosting, verified by the Green Web Foundation" decoding="async">
         </a>
       </div>
 
