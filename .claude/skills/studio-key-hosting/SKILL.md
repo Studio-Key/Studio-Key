@@ -10,7 +10,8 @@ Use this as the source of truth for anything about Studio Key hosting. If this f
 ## 1. Who Studio Key is
 
 - Rich, an independent website hosting provider. One named person, not a team.
-- Trading entity: RMD Trading Limited, trading as Studio Key. Registered office: 44 Furlong Close, Weldon, NN17 5AW (footer legal line only).
+- Trading entity: RMD Trading Limited (company no. 11656826), trading as Studio Key. Registered office: 44 Furlong Close, Weldon, NN17 5AW (footer legal line only).
+- Server: Hetzner (green hosting, verified by the Green Web Foundation).
 - Public location wording: "Based in Corby, serving the East Midlands".
 - Looks after 110+ business websites.
 - Hosting is the main service. Rich also builds websites and does ongoing maintenance (secondary, mention lightly).
@@ -45,7 +46,7 @@ Useful Rich analogies (reuse the idea, tidy the wording):
 | .com domain | £22 a year | Only where Studio Key registers it |
 | Support, fixes, changes | £65 an hour | Rich quotes time up front |
 | Moving your site to Studio Key | Free | Rich does the migration |
-| Leaving | No lock-in | You get your files. Notice period wording: see PRD open items |
+| Leaving | No lock-in | 30-day money-back on new plans, then one month's notice with unused full months refunded, free full backup to take away (PRD 7.3, pending Rich's sign-off) |
 
 Customers keep their existing domain and website. Rich never pushes a domain transfer: "I never recommend moving a domain provider" unless there is a real gain for the customer.
 
@@ -88,14 +89,15 @@ Approved (true, evidenced):
 - Direct support from Rich, no call centre.
 - Free migration. Keep your existing domain and website.
 - Private UK server. (Do not say "Nginx" in public copy: the estate is mixed.)
-- Hosted in data centres powered by renewable energy (pending Rich's evidence, see PRD).
-- 5-star Google reviews (pending count, rating and link, see PRD).
+- Green hosting, verified by the Green Web Foundation (live badge: `https://app.greenweb.org/api/v3/greencheckimage/www.studio-key.co.uk?nocache=true`, links to the Green Web Check).
+- 5-star Google reviews (three reviews in PRD 8.1; no count until Rich supplies it).
+- Free migration, scope as PRD 7.1. Most moves go unnoticed by visitors (never "zero downtime").
 - Backups stored on Amazon Web Services.
 
 Banned:
 - "Google certified" or any Google Partner badge.
 - "AWS Partner" or anything implying an AWS partnership.
-- Uptime percentages, speed figures or response-time guarantees Rich has not confirmed.
+- "Zero downtime", "best hosting", uptime percentages, speed figures or response-time guarantees Rich has not confirmed.
 - Server IPs, hostnames, reseller names, staging URLs, bank details, passwords.
 - Overstone, Azzurri, property-sector content, billing-recovery figures.
 - Customer names or quotes without written permission.
@@ -110,6 +112,8 @@ Banned:
 - Prices stated up front.
 - No em dashes. No "actually". No adverbs unless removing one changes the meaning. No rule-of-three padding. No binary contrasts ("not X, it's Y"). Active voice.
 - Never write "discovery call". Use "15-minute call" or "quick chat".
-- CTAs (first person): "Let's talk", "Talk to me", "See my prices", "Send me a message", "WhatsApp me".
+- Primary CTA everywhere: "Move my website". Secondary: "See my prices". Low-commitment: "Get a free hosting check". Contact: "Call me", "WhatsApp me", "Send me a message".
+- Plain English. No jargon above the fold (NVMe, LiteSpeed, PHP workers, Nginx).
+- Order: outcome, benefits, proof, detail.
 
 Before shipping any copy, run it through the stop-slop and humanizer checks.

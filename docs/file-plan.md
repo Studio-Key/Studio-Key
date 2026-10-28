@@ -43,6 +43,7 @@ Studio-Key/
 │   ├── about/index.php
 │   ├── contact/index.php
 │   ├── privacy/index.php
+│   ├── terms/index.php
 │   ├── 404.php
 │   ├── api/enquiry.php           POST only. Validates, calls Brevo, returns JSON or redirects (no-JS)
 │   ├── robots.txt
@@ -100,7 +101,7 @@ One place for anything that appears in more than one spot: business name, legal 
 | Code exposure | `app/`, `storage/`, `docs/`, `.git` never web-reachable. Includes guarded by `SK_APP` |
 | Secrets | `app/secrets.php` only, git-ignored, file mode 600 |
 | Errors | `display_errors=0` live, errors to the PHP-FPM log |
-| Headers (PHP and Nginx) | HSTS, CSP (self + GA4 domains only, no inline script except a nonce'd consent default), `X-Content-Type-Options: nosniff`, `Referrer-Policy: strict-origin-when-cross-origin`, `Permissions-Policy` (camera, mic, geolocation off), `frame-ancestors 'none'` |
+| Headers (PHP and Nginx) | HSTS, CSP (self + GA4 domains + `app.greenweb.org` for the badge image only, no inline script except a nonce'd consent default), `X-Content-Type-Options: nosniff`, `Referrer-Policy: strict-origin-when-cross-origin`, `Permissions-Policy` (camera, mic, geolocation off), `frame-ancestors 'none'` |
 | Output | Every dynamic value through `e()` (`htmlspecialchars`, ENT_QUOTES, UTF-8) |
 | Form | POST only, same-origin check, stateless HMAC token with timestamp (cache-safe behind Cloudflare, no session cookie), honeypot, 3-second time trap, length limits, email validation, rate limit 5/hour per hashed IP, header-injection safe |
 | Brevo | Server-side only, key never sent to the browser. 5-second timeout, fallback lead log |
@@ -121,6 +122,7 @@ Stable attribute names. Do not rename once live: the dashboard will key on them.
 | `data-form` / `data-step` | form and each step | `enquiry` / `1`, `2`, `3` |
 | `data-video` | video element | `sales-letter` |
 | `data-faq` | each FAQ item | slug of the question |
+| `data-review` | each review | `ryan-young` |
 
 Event shape pushed to `dataLayer` and the collector:
 
@@ -129,14 +131,14 @@ Event shape pushed to `dataLayer` and the collector:
   "ts": 1730131200000, "session": "random-first-party-id", "utm_campaign": "autumn-email" }
 ```
 
-Event names: `page_view`, `section_view`, `scroll_depth`, `dwell`, `cta_click`, `contact_click`, `video_play`, `video_progress`, `video_complete`, `form_step_view`, `form_step_complete`, `form_submit`, `form_error`, `faq_open`.
+Event names: `page_view`, `section_view`, `scroll_depth`, `dwell`, `cta_click`, `contact_click`, `video_play`, `video_progress`, `video_complete`, `form_step_view`, `form_step_complete`, `form_submit`, `form_error`, `faq_open`, `review_expand`.
 
 ## 7. Build order
 
 1. `app/bootstrap.php`, `config.php`, partials, `site.css` tokens and base.
 2. Home with locked copy and video placeholder.
 3. Enquiry form front end, then `api/enquiry.php` with Brevo.
-4. Pricing, About, Contact, Privacy, 404.
+4. Pricing, About, Contact, Privacy, Terms, 404.
 5. Schema, meta, sitemap, robots.
 6. `track.js`, consent banner, GA4.
 7. `deploy/` Nginx snippets and redirects.
