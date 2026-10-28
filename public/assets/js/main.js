@@ -208,7 +208,7 @@
 
   /* ---------- Sticky mobile bar: hidden while the hero's own button or the form is on screen ---------- */
   const bar = d.querySelector('.sticky-bar');
-  const watch = [d.querySelector('.hero__actions, .page-hero .hero__actions'), d.querySelector('[data-section="enquiry"]')].filter(Boolean);
+  const watch = [d.querySelector('.hero__actions'), d.querySelector('.plans'), d.querySelector('.not-found__links'), d.querySelector('[data-section="enquiry"]')].filter(Boolean);
   if (bar && watch.length && 'IntersectionObserver' in window) {
     const onScreen = new Set();
     bar.classList.add('is-hidden');
@@ -221,6 +221,10 @@
 
   /* ---------- Menu fallback for browsers without the popover API ---------- */
   const menu = d.getElementById('mobile-menu');
+  if (menu && 'popover' in HTMLElement.prototype) {
+    // Move focus into the menu when it opens; the popover API returns it on close.
+    menu.addEventListener('toggle', (e) => { if (e.newState === 'open') menu.querySelector('a')?.focus(); });
+  }
   if (menu && !('popover' in HTMLElement.prototype)) {
     menu.removeAttribute('popover');
     menu.hidden = true;
