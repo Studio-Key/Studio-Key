@@ -34,16 +34,19 @@ include APP . '/partials/header.php';
         <a class="link-quiet link-quiet--light" href="/pricing/" data-cta="hero-pricing">See my prices <?= icon('arrow-right') ?></a>
       </div>
       <ul class="hero__proof">
-        <li><span class="stars stars--sm" aria-hidden="true"><?= str_repeat(icon('star-fill', 'icon star'), 5) ?></span> 5-star Google reviews</li>
         <li><?= icon('tag') ?> <?= money($std['price']) ?> a year, all in</li>
         <li><?= icon('lock-simple') ?> Free SSL for life</li>
+        <li><?= icon('truck') ?> Free migration</li>
       </ul>
     </div>
     <div class="hero__media">
       <?php include APP . '/partials/video.php'; ?>
     </div>
   </div>
-  <div class="container hero__trust">
+</section>
+
+<section class="trust-band" data-section="trust" aria-label="Why you can trust this hosting">
+  <div class="container">
     <?php include APP . '/partials/trust-logos.php'; ?>
   </div>
 </section>
@@ -56,7 +59,7 @@ include APP . '/partials/header.php';
       <p class="prose-lg">But if you want straightforward, honest website hosting with clear pricing and someone you can speak to directly, without waiting in a support queue, let's talk.</p>
       <div class="inline-actions">
         <a class="btn btn--primary" href="/contact/" data-cta="qualifier-primary"><?= e(cfg('cta_primary')) ?> <?= icon('arrow-right') ?></a>
-        <a class="link-quiet" href="/contact/?need=check#enquiry" data-cta="qualifier-check">Or get a free hosting check</a>
+        <a class="link-quiet" href="/contact/?need=check#enquiry" data-cta="qualifier-check">Get a free hosting check <?= icon('arrow-right') ?></a>
       </div>
     </div>
     <aside class="split__side reveal" data-section="promise" aria-labelledby="promise-title">
@@ -81,28 +84,32 @@ include APP . '/partials/header.php';
 
 <section class="section section--dark ambient ambient--alt" data-section="problems" aria-labelledby="problems-title">
   <div class="container">
+    <header class="section-head section-head--center">
+      <p class="eyebrow">Why people move to me</p>
+      <h2 class="h2">Hosting shouldn't come with surprises</h2>
+    </header>
     <div class="compare">
       <div class="compare__col glass reveal">
         <h2 class="h3" id="problems-title">Sound familiar?</h2>
-        <ul class="emoji-list">
-          <li><span aria-hidden="true">💸</span> Unexpected £79+ yearly SSL and domain protection fees</li>
-          <li><span aria-hidden="true">💸</span> Paying more than you should for hosting</li>
-          <li><span aria-hidden="true">❌</span> Confusing website management and unclear charges</li>
-          <li><span aria-hidden="true">❌</span> Feeling like you have no ownership of your website</li>
-          <li><span aria-hidden="true">⚠️</span> Unreliable or missing backups</li>
-          <li><span aria-hidden="true">⚠️</span> Slow, impersonal customer support</li>
+        <ul class="icon-list">
+          <li><span class="li-icon li-icon--pain"><?= icon('currency-gbp') ?></span> Unexpected £79+ yearly SSL and domain protection fees</li>
+          <li><span class="li-icon li-icon--pain"><?= icon('currency-gbp') ?></span> Paying more than you should for hosting</li>
+          <li><span class="li-icon li-icon--pain"><?= icon('x-circle') ?></span> Confusing website management and unclear charges</li>
+          <li><span class="li-icon li-icon--pain"><?= icon('x-circle') ?></span> Feeling like you have no ownership of your website</li>
+          <li><span class="li-icon li-icon--warn"><?= icon('warning') ?></span> Unreliable or missing backups</li>
+          <li><span class="li-icon li-icon--warn"><?= icon('warning') ?></span> Slow, impersonal customer support</li>
         </ul>
       </div>
       <div class="compare__col compare__col--good glass reveal" data-section="solutions">
         <h2 class="h3">A more straightforward approach</h2>
-        <ul class="emoji-list">
-          <li><span aria-hidden="true">✅</span> Transparent, predictable pricing</li>
-          <li><span aria-hidden="true">✅</span> Free SSL certificates for life</li>
-          <li><span aria-hidden="true">✅</span> Complete ownership of your website</li>
-          <li><span aria-hidden="true">✅</span> Automatic, secure daily backups</li>
-          <li><span aria-hidden="true">✅</span> Direct support from me, without a call centre</li>
-          <li><span aria-hidden="true">✅</span> Practical advice tailored to your business</li>
-          <li><span aria-hidden="true">✅</span> Fast, reliable hosting on a private server</li>
+        <ul class="icon-list">
+          <li><span class="li-icon li-icon--good"><?= icon('check-circle') ?></span> Transparent, predictable pricing</li>
+          <li><span class="li-icon li-icon--good"><?= icon('check-circle') ?></span> Free SSL certificates for life</li>
+          <li><span class="li-icon li-icon--good"><?= icon('check-circle') ?></span> Complete ownership of your website</li>
+          <li><span class="li-icon li-icon--good"><?= icon('check-circle') ?></span> Automatic, secure daily backups</li>
+          <li><span class="li-icon li-icon--good"><?= icon('check-circle') ?></span> Direct support from me, without a call centre</li>
+          <li><span class="li-icon li-icon--good"><?= icon('check-circle') ?></span> Practical advice tailored to your business</li>
+          <li><span class="li-icon li-icon--good"><?= icon('check-circle') ?></span> Fast, reliable hosting on a private server</li>
         </ul>
       </div>
     </div>
@@ -139,7 +146,7 @@ include APP . '/partials/header.php';
         <p>From then on, you have my number. No tickets, no queue, and the same person every time.</p>
       </li>
     </ol>
-    <p class="aside-note reveal"><?= icon('sparkle') ?> <span><strong>New to hosting?</strong> I'll set up your hosting, SSL and email from scratch, and explain each part in plain English as I go. <a href="/contact/?need=new#enquiry" data-cta="how-new">Start here</a>.</span></p>
+    <p class="aside-note aside-note--wide reveal"><?= icon('sparkle') ?> <span><strong>New to hosting?</strong> I'll set up your hosting, SSL and email from scratch, and explain each part in plain English as I go. <a href="/contact/?need=new#enquiry" data-cta="how-new">Start here</a>.</span></p>
   </div>
 </section>
 
@@ -168,6 +175,7 @@ include APP . '/partials/header.php';
         <div><dt><?= icon('door-open') ?> Easy to leave</dt><dd>One month's notice, unused months refunded, and a full backup of your site to take with you.</dd></div>
         <div><dt><?= icon('shield-check') ?> Clear responsibilities</dt><dd>I look after the server, security, SSL and backups. <a href="/pricing/#who-does-what">See who does what</a>.</dd></div>
       </dl>
+      <?php $quote = 'tejal-prajapati'; include APP . '/partials/quote.php'; ?>
     </div>
   </div>
 </section>
@@ -203,6 +211,7 @@ include APP . '/partials/header.php';
         <span class="person__avatar" aria-hidden="true">R</span>
         <span><strong>Rich</strong><span>I reply today or the next working day</span></span>
       </div>
+      <?php $quote = 'timothy-lyons'; include APP . '/partials/quote.php'; ?>
       <ul class="contact-list">
         <li><a href="tel:<?= e(cfg('phone_e164')) ?>" data-contact="phone" data-cta="enquiry-call"><?= icon('phone') ?> <?= e(cfg('phone_display')) ?></a></li>
         <li><a href="<?= e(cfg('whatsapp')) ?>" rel="noopener" target="_blank" data-contact="whatsapp" data-cta="enquiry-whatsapp"><?= icon('whatsapp-logo') ?> WhatsApp me</a></li>

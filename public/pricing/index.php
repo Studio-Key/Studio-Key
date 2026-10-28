@@ -58,15 +58,15 @@ include APP . '/partials/header.php';
 ?>
 <main id="main">
 
-<section class="page-hero section--dark ambient" data-section="pricing-hero" aria-labelledby="pricing-title">
+<section class="page-hero page-hero--tight section--dark ambient" data-section="pricing-hero" aria-labelledby="pricing-title">
   <div class="container">
     <p class="eyebrow"><?= icon('tag') ?> Pricing</p>
     <h1 class="h1" id="pricing-title">The price you see is the price you pay</h1>
-    <p class="lead">Two plans, billed once a year. No VAT to add, no SSL fees, no domain protection charges, and no price rises without 30 days' notice in writing.</p>
+    <p class="lead">From <strong class="text-white">£119 a year, all in</strong>. Billed once a year, no VAT to add, no SSL fees, no domain protection charges, and no price rises without 30 days' notice in writing.</p>
   </div>
 </section>
 
-<section class="section" data-section="plans" aria-labelledby="plans-title">
+<section class="section section--pull" data-section="plans" aria-labelledby="plans-title">
   <div class="container">
     <h2 class="sr-only" id="plans-title">Hosting plans</h2>
     <div class="plans">
@@ -82,9 +82,14 @@ include APP . '/partials/header.php';
               <li><?= icon('check') ?> <?= e($f) ?></li>
             <?php endforeach; ?>
           </ul>
-          <a class="btn <?= $key === 'standard' ? 'btn--primary' : 'btn--ghost' ?> btn--block" href="/contact/" data-cta="plan-<?= e($key) ?>"><?= e(cfg('cta_primary')) ?> <?= icon('arrow-right') ?></a>
+          <a class="btn <?= $key === 'standard' ? 'btn--primary' : 'btn--ghost' ?> btn--block" href="/contact/?plan=<?= e($key) ?>#enquiry" data-cta="plan-<?= e($key) ?>">Choose <?= e($p['name']) ?> <?= icon('arrow-right') ?></a>
         </article>
       <?php endforeach; ?>
+    </div>
+
+    <div class="plans-proof">
+      <?php $quote = 'ryan-young'; include APP . '/partials/quote.php'; ?>
+      <?php $quote = 'tejal-prajapati'; include APP . '/partials/quote.php'; ?>
     </div>
 
     <div class="extras">
@@ -118,7 +123,7 @@ include APP . '/partials/header.php';
         <thead><tr><th scope="col">Task</th><th scope="col">Standard</th><th scope="col">Managed</th></tr></thead>
         <tbody>
           <?php foreach ($duties as [$task, $std, $man]): ?>
-            <tr><th scope="row"><?= e($task) ?></th><td><?= $cell($std) ?></td><td><?= $cell($man) ?></td></tr>
+            <tr><th scope="row"><?= e($task) ?></th><td data-label="Standard"><?= $cell($std) ?></td><td data-label="Managed"><?= $cell($man) ?></td></tr>
           <?php endforeach; ?>
         </tbody>
       </table>

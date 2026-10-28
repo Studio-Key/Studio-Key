@@ -204,11 +204,17 @@
     });
   }
 
-  /* ---------- Sticky mobile bar hides when the form is on screen ---------- */
+  /* ---------- Sticky mobile bar: hidden while the hero's own button or the form is on screen ---------- */
   const bar = d.querySelector('.sticky-bar');
-  const formArea = d.querySelector('[data-section="enquiry"]');
-  if (bar && formArea && 'IntersectionObserver' in window) {
-    new IntersectionObserver(([en]) => bar.classList.toggle('is-hidden', en.isIntersecting), { threshold: 0.15 }).observe(formArea);
+  const watch = [d.querySelector('.hero__actions, .page-hero .hero__actions'), d.querySelector('[data-section="enquiry"]')].filter(Boolean);
+  if (bar && watch.length && 'IntersectionObserver' in window) {
+    const onScreen = new Set();
+    bar.classList.add('is-hidden');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((en) => (en.isIntersecting ? onScreen.add(en.target) : onScreen.delete(en.target)));
+      bar.classList.toggle('is-hidden', onScreen.size > 0);
+    }, { threshold: 0 });
+    watch.forEach((el) => io.observe(el));
   }
 
   /* ---------- Menu fallback for browsers without the popover API ---------- */

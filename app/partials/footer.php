@@ -20,7 +20,7 @@
         </ul>
       </nav>
 
-      <div class="site-footer__col">
+      <div class="site-footer__col site-footer__col--contact">
         <h2 class="site-footer__heading">Get in touch</h2>
         <ul>
           <li><a href="tel:<?= e(cfg('phone_e164')) ?>" data-contact="phone" data-cta="footer-call"><?= icon('phone') ?> <?= e(cfg('phone_display')) ?></a></li>
@@ -47,11 +47,13 @@
   </div>
 </footer>
 
+<?php if (!in_array($page['id'], ['privacy', 'terms'], true)): ?>
 <nav class="sticky-bar glass" aria-label="Quick contact" data-section="sticky-bar">
   <a href="tel:<?= e(cfg('phone_e164')) ?>" data-contact="phone" data-cta="sticky-call"><?= icon('phone') ?><span>Call</span></a>
   <a href="<?= e(cfg('whatsapp')) ?>" rel="noopener" target="_blank" data-contact="whatsapp" data-cta="sticky-whatsapp"><?= icon('whatsapp-logo') ?><span>WhatsApp</span></a>
   <a class="sticky-bar__primary" href="/contact/" data-cta="sticky-primary"><?= e(cfg('cta_primary')) ?></a>
 </nav>
+<?php endif; ?>
 
 <?php include APP . '/partials/consent.php'; ?>
 <?php foreach ($page['scripts'] ?? [] as $script): ?>

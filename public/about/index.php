@@ -35,10 +35,10 @@ include APP . '/partials/header.php';
       </div>
     </div>
     <div class="about-hero__photo">
-      <div class="photo-placeholder glass" role="img" aria-label="Photo of Rich coming soon">
-        <?= icon('user-circle') ?>
-        <span>Photo of Rich coming soon</span>
-      </div>
+      <figure class="portrait glass">
+        <div class="portrait__img" role="img" aria-label="Photo of Rich coming soon"><span aria-hidden="true">R</span></div>
+        <figcaption><strong>Rich</strong> Corby, Northamptonshire</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -55,6 +55,7 @@ include APP . '/partials/header.php';
       <h2 class="h3" id="also-title">I also build websites</h2>
       <p class="lead--dark">Hosting is what I do most, but I also design, build and look after websites for local businesses. If your site needs more than a new home, I can help with that too.</p>
       <p><a class="link-quiet" href="/contact/?need=new#enquiry" data-cta="about-build">Talk to me about a new website <?= icon('arrow-right') ?></a></p>
+      <?php $quote = 'ryan-young'; include APP . '/partials/quote.php'; ?>
     </aside>
   </div>
 </section>

@@ -25,6 +25,7 @@ include APP . '/partials/header.php';
         <span class="person__avatar" aria-hidden="true">R</span>
         <span><strong>Rich</strong><span><?= e(cfg('hours')) ?></span></span>
       </div>
+      <?php $quote = 'timothy-lyons'; include APP . '/partials/quote.php'; ?>
       <ul class="contact-list">
         <li><a href="tel:<?= e(cfg('phone_e164')) ?>" data-contact="phone" data-cta="contact-call"><?= icon('phone') ?> <?= e(cfg('phone_display')) ?></a></li>
         <li><a href="<?= e(cfg('whatsapp')) ?>" rel="noopener" target="_blank" data-contact="whatsapp" data-cta="contact-whatsapp"><?= icon('whatsapp-logo') ?> WhatsApp me</a></li>

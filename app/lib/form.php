@@ -138,6 +138,7 @@ function form_validate(array $in): array
         'reply'     => $reply,
         'message'   => clean_text($in['message'] ?? '', 2000),
         'tips'      => ($in['tips'] ?? '') === 'yes',
+        'plan'      => is_string($in['plan'] ?? null) && isset(cfg('plans')[$in['plan']]) ? $in['plan'] : '',
         'utm'       => [],
         'page'      => clean_line($in['page'] ?? '', 200),
         'referrer'  => clean_line($in['referrer'] ?? '', 300),
@@ -170,6 +171,7 @@ function form_summary(array $d): string
 {
     $lines = [
         'Need: ' . (form_needs()[$d['need']]['label'] ?? $d['need']),
+        'Plan: ' . ($d['plan'] !== '' ? cfg('plans')[$d['plan']]['name'] : '-'),
         'Name: ' . $d['name'],
         'Email: ' . $d['email'],
         'Phone: ' . ($d['phone'] ?: '-'),

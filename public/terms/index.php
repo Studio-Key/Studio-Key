@@ -20,8 +20,8 @@ include APP . '/partials/header.php';
   </div>
 </section>
 
-<section class="section" data-section="terms">
-  <div class="container prose">
+<section class="section section--legal" data-section="terms">
+  <div class="container"><div class="prose">
     <h2>1. What you get</h2>
     <p>Hosting for one website on a private server managed by me, with a free SSL certificate, daily backups to Amazon Web Services, uptime monitoring and direct support from me. The Managed plan adds WordPress core, plugin and theme updates. The <a href="/pricing/#who-does-what">who looks after what</a> table is part of these terms.</p>
 
@@ -58,7 +58,7 @@ include APP . '/partials/header.php';
 
     <h2>10. The legal bit</h2>
     <p>These terms are governed by the law of England and Wales. Questions? Email <a href="mailto:<?= e(cfg('email')) ?>"><?= e(cfg('email')) ?></a> or call <?= e(cfg('phone_display')) ?>.</p>
-  </div>
+  </div></div>
 </section>
 </main>
 <?php include APP . '/partials/footer.php'; ?>

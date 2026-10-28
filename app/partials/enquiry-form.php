@@ -9,9 +9,13 @@ require_once APP . '/lib/form.php';
 $fid = $form_id ?? 'enq';
 $pre = is_string($_GET['need'] ?? null) && isset(form_needs()[$_GET['need']]) ? $_GET['need'] : '';
 $status = is_string($_GET['status'] ?? null) ? $_GET['status'] : '';
+$plan = is_string($_GET['plan'] ?? null) && isset(cfg('plans')[$_GET['plan']]) ? $_GET['plan'] : '';
+if ($plan !== '' && $pre === '') {
+    $pre = 'move';
+}
 ?>
 <form class="enquiry" id="<?= e($fid) ?>" action="/api/enquiry.php" method="post" data-form="enquiry" aria-describedby="<?= e($fid) ?>-intro">
-  <p class="enquiry__intro" id="<?= e($fid) ?>-intro">Three quick steps. Only your name and email are required.</p>
+  <p class="enquiry__intro" id="<?= e($fid) ?>-intro"><?php if ($plan !== ''): ?><span class="plan-pill"><?= icon('check-circle') ?> <?= e(cfg('plans')[$plan]['name']) ?> plan, <?= money(cfg('plans')[$plan]['price']) ?> a year</span> <?php endif; ?>Three quick steps. Only your name and email are required.</p>
 
   <ol class="steps" aria-hidden="true">
     <li class="steps__item is-active" data-step-dot="1"><span>1</span> Need</li>
@@ -27,6 +31,7 @@ $status = is_string($_GET['status'] ?? null) ? $_GET['status'] : '';
 
   <input type="hidden" name="token" value="<?= e(form_token()) ?>">
   <input type="hidden" name="page" value="<?= e($page['path']) ?>">
+  <input type="hidden" name="plan" value="<?= e($plan) ?>">
   <input type="hidden" name="landing" value="">
   <input type="hidden" name="referrer" value="">
   <?php foreach (['source', 'medium', 'campaign', 'term', 'content'] as $k): ?>
@@ -133,6 +138,7 @@ $status = is_string($_GET['status'] ?? null) ? $_GET['status'] : '';
     <button type="submit" class="btn btn--primary" data-submit>Send my message <?= icon('paper-plane-tilt') ?></button>
   </div>
   <p class="enquiry__status" role="status" aria-live="polite"></p>
+  <p class="enquiry__promise"><?= icon('clock') ?> I reply today or the next working day. No obligation.</p>
 </form>
 
 <div class="enquiry-done" id="<?= e($fid) ?>-done" hidden tabindex="-1">
