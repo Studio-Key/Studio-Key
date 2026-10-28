@@ -11,6 +11,8 @@ Companion docs:
 
 Where these docs are silent or conflict with the code, stop and ask Rich.
 
+Order of authority: Impeccable findings override this PRD where they conflict, including the locked copy in section 5 and the design system in section 11 (Rich, 28 Oct 2026). Facts, prices, claims and the banned lists still never change without Rich. See `PRODUCT.md`.
+
 ---
 
 ## 1. Goal

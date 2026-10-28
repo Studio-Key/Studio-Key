@@ -5,7 +5,7 @@ description: Studio Key website hosting knowledge base. What web hosting is in p
 
 # Studio Key hosting knowledge base
 
-Use this as the source of truth for anything about Studio Key hosting. If this file conflicts with `docs/PRD.md`, the PRD wins. If either is silent, ask Rich. Never invent facts, figures, reviews or certifications.
+Use this as the source of truth for anything about Studio Key hosting. If this file conflicts with `docs/PRD.md`, the PRD wins (and Impeccable findings win over both, see `PRODUCT.md`). If either is silent, ask Rich. Never invent facts, figures, reviews or certifications.
 
 ## 1. Who Studio Key is
 

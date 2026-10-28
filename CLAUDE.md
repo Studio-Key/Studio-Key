@@ -5,7 +5,7 @@ Hosting business site for Rich (Studio Key, Corby, East Midlands). Plain PHP inc
 ## Before any task
 
 - Load the `studio-key-hosting` skill (`.claude/skills/studio-key-hosting/SKILL.md`).
-- Read `docs/PRD.md`. It wins over every other doc. If it is silent or conflicts with the code, ask Rich.
+- Read `PRODUCT.md` for the order of authority: Impeccable findings override `docs/PRD.md` and every other doc, locked copy included. Then read `docs/PRD.md`, which wins over the remaining docs. If it is silent or conflicts with the code, ask Rich.
 - Copy work: also follow `docs/voice-and-customers.md` and run stop-slop and humanizer checks.
 - Page work: `docs/page-plan.md`. SEO work: `docs/seo-plan.md`. Structure and security: `docs/file-plan.md`.
 
@@ -15,7 +15,7 @@ Hosting business site for Rich (Studio Key, Corby, East Midlands). Plain PHP inc
 
 ## Hard rules
 
-- Homepage copy in PRD section 5 is locked. Do not reword it.
+- Homepage copy in PRD section 5 is locked. Only an Impeccable finding can change it.
 - British English, first person "I", no em dashes, no "actually" in new copy.
 - Never publish anything in the skill's "Banned" list or `docs/voice-and-customers.md` "Do not publish".
 - Keep tracking attribute names stable (`docs/file-plan.md`, section 6).
