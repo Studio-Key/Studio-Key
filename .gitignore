@@ -1,0 +1,4 @@
+app/secrets.php
+storage/*
+!storage/.gitkeep
+.DS_Store
