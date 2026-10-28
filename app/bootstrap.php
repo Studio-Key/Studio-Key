@@ -123,6 +123,24 @@ function inline_css(string $file): string
     return $css;
 }
 
+/**
+ * Legal pages: gives each <h2> an id and returns the prose plus a sticky contents list.
+ */
+function legal_with_toc(string $html): string
+{
+    $items = [];
+    $html = preg_replace_callback('#<h2(?: id="([^"]+)")?>(.*?)</h2>#', static function (array $m) use (&$items): string {
+        $id = $m[1] !== '' ? $m[1] : trim((string) preg_replace('/[^a-z0-9]+/', '-', strtolower(strip_tags($m[2]))), '-');
+        $items[] = [$id, strip_tags($m[2])];
+        return '<h2 id="' . $id . '">' . $m[2] . '</h2>';
+    }, $html) ?? $html;
+    $toc = '<nav class="toc" aria-label="On this page"><p class="toc__title">On this page</p><ol>';
+    foreach ($items as [$id, $label]) {
+        $toc .= '<li><a href="#' . e($id) . '">' . e(html_entity_decode($label, ENT_QUOTES)) . '</a></li>';
+    }
+    return $html . $toc . '</ol></nav>';
+}
+
 /** Secret used to sign form tokens and hash IPs. Created on first use if not set. */
 function app_key(): string
 {

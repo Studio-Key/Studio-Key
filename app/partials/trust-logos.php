@@ -1,8 +1,9 @@
 <?php defined('SK_APP') || exit; ?>
 <ul class="trust" aria-label="Why you can trust this hosting">
   <li class="trust__item">
-    <a class="trust__badge" href="<?= e(cfg('green_check_url')) ?>" rel="noopener" target="_blank" data-cta="trust-green">
-      <img src="/assets/img/logos/green-web-foundation.png" width="200" height="95" alt="Green hosting, verified by the Green Web Foundation" decoding="async">
+    <a class="trust__link" href="<?= e(cfg('green_check_url')) ?>" rel="noopener" target="_blank" data-cta="trust-green">
+      <?= icon('leaf', 'icon trust__icon') ?>
+      <span><strong>Green hosting</strong> Verified by the Green Web Foundation</span>
     </a>
   </li>
   <li class="trust__item">

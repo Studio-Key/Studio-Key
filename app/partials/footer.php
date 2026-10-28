@@ -42,7 +42,7 @@
 
     <p class="site-footer__legal">
       Studio Key is a trading name of <?= e(cfg('legal_name')) ?>. Registered in England and Wales, company no. <?= e(cfg('company_no')) ?>.
-      Registered office: <?= e(cfg('office')) ?>. Not VAT registered. &copy; <?= date('Y') ?> <?= e(cfg('legal_name')) ?>.
+      Registered office: <?= e(cfg('office')) ?>. Not VAT registered. &copy;&nbsp;<?= date('Y') ?>&nbsp;<?= e(cfg('legal_name')) ?>.
     </p>
   </div>
 </footer>

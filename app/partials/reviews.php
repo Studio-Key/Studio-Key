@@ -8,7 +8,7 @@ $reviews = require APP . '/content/reviews.php';
       <div class="stars" role="img" aria-label="5 out of 5 stars"><?= str_repeat(icon('star-fill', 'icon star'), 5) ?></div>
       <blockquote class="review__pull"><p>&ldquo;<?= e($r['pull']) ?>&rdquo;</p></blockquote>
       <details class="review__more">
-        <summary>Read the full review</summary>
+        <summary><span class="when-closed">Read the full review</span><span class="when-open">Show less</span></summary>
         <p><?= e($r['text']) ?></p>
       </details>
       <figcaption class="review__by">

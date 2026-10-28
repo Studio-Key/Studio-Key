@@ -112,12 +112,13 @@
   const setConsent = (value) => {
     consent = value;
     local.set(CONSENT_KEY, value);
-    if (banner) banner.hidden = true;
+    showBanner(false);
     if (value === 'granted') startTracking();
     else clearAnalyticsCookies();
   };
+  const showBanner = (show) => { if (banner) { banner.hidden = !show; body.classList.toggle('consent-open', show); } };
   if (banner) {
-    if (!consent) banner.hidden = false;
+    if (!consent) showBanner(true);
     banner.addEventListener('click', (e) => {
       const b = e.target.closest('[data-consent]');
       if (b) setConsent(b.dataset.consent);
@@ -125,7 +126,7 @@
   }
   d.addEventListener('click', (e) => {
     if (e.target.closest('[data-consent-open]') && banner) {
-      banner.hidden = false;
+      showBanner(true);
       banner.querySelector('button')?.focus();
     }
   });

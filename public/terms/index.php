@@ -8,20 +8,21 @@ $page = [
     'title' => 'Hosting Terms in Plain English | Studio Key',
     'description' => 'Studio Key hosting terms: yearly billing, 30-day money-back, cancellation, free migration scope and who looks after what.',
 ];
-$updated = '28 October 2026';
+$updated = '28&nbsp;October&nbsp;2026';
 include APP . '/partials/head.php';
 include APP . '/partials/header.php';
 ?>
 <main id="main">
 <section class="page-hero section--dark" data-section="terms-hero" aria-labelledby="terms-title">
   <div class="container">
+    <p class="eyebrow"><?= icon('scales') ?> Legal</p>
     <h1 class="h1" id="terms-title">Hosting terms, in plain English</h1>
-    <p class="lead">The agreement between you and <?= e(cfg('legal_name')) ?>, trading as Studio Key. Last updated <?= e($updated) ?>.</p>
+    <p class="lead">The agreement between you and <?= e(cfg('legal_name')) ?>, trading as Studio Key. Last updated <?= $updated ?>.</p>
   </div>
 </section>
 
 <section class="section section--legal" data-section="terms">
-  <div class="container"><div class="prose">
+  <div class="container legal"><?php ob_start(); ?><div class="prose">
     <h2>1. What you get</h2>
     <p>Hosting for one website on a private server managed by me, with a free SSL certificate, daily backups to Amazon Web Services, uptime monitoring and direct support from me. The Managed plan adds WordPress core, plugin and theme updates. The <a href="/pricing/#who-does-what">who looks after what</a> table is part of these terms.</p>
 
@@ -58,7 +59,7 @@ include APP . '/partials/header.php';
 
     <h2>10. The legal bit</h2>
     <p>These terms are governed by the law of England and Wales. Questions? Email <a href="mailto:<?= e(cfg('email')) ?>"><?= e(cfg('email')) ?></a> or call <?= e(cfg('phone_display')) ?>.</p>
-  </div></div>
+  </div><?= legal_with_toc((string) ob_get_clean()) ?></div>
 </section>
 </main>
 <?php include APP . '/partials/footer.php'; ?>

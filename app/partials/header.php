@@ -20,7 +20,9 @@ $current = $page['path'];
       <a class="site-header__phone" href="tel:<?= e(cfg('phone_e164')) ?>" data-contact="phone" data-cta="header-call">
         <?= icon('phone') ?><span><?= e(cfg('phone_display')) ?></span>
       </a>
+      <?php if ($current !== '/contact/'): ?>
       <a class="btn btn--primary btn--sm site-header__cta" href="/contact/" data-cta="header-primary"><?= e(cfg('cta_primary')) ?></a>
+      <?php endif; ?>
       <button class="menu-btn" type="button" popovertarget="mobile-menu" aria-label="Open menu" data-cta="menu-open"><?= icon('list') ?></button>
     </div>
   </div>

@@ -68,7 +68,7 @@ if ($plan !== '' && $pre === '') {
       </div>
       <div class="field">
         <label for="<?= e($fid) ?>-host">Who hosts it now? <span class="opt">(optional, a guess is fine)</span></label>
-        <input id="<?= e($fid) ?>-host" name="host" type="text" placeholder="e.g. GoDaddy, 123 Reg, my old web designer" maxlength="100">
+        <input id="<?= e($fid) ?>-host" name="host" type="text" placeholder="e.g. GoDaddy, 123 Reg" maxlength="100">
       </div>
       <fieldset class="field">
         <legend>What's bugging you? <span class="opt">(optional)</span></legend>

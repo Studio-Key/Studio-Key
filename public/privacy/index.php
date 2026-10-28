@@ -8,20 +8,21 @@ $page = [
     'title' => 'Privacy and Cookies | Studio Key',
     'description' => 'How Studio Key collects, uses and protects your personal data, which cookies the site uses and how to exercise your rights.',
 ];
-$updated = '28 October 2026';
+$updated = '28&nbsp;October&nbsp;2026';
 include APP . '/partials/head.php';
 include APP . '/partials/header.php';
 ?>
 <main id="main">
 <section class="page-hero section--dark" data-section="privacy-hero" aria-labelledby="privacy-title">
   <div class="container">
+    <p class="eyebrow"><?= icon('scales') ?> Legal</p>
     <h1 class="h1" id="privacy-title">Privacy and cookies</h1>
-    <p class="lead">What I collect, why, who else sees it, and how to ask me to delete it. Last updated <?= e($updated) ?>.</p>
+    <p class="lead">What I collect, why, who else sees it, and how to ask me to delete it. Last updated <?= $updated ?>.</p>
   </div>
 </section>
 
 <section class="section section--legal" data-section="privacy">
-  <div class="container"><div class="prose">
+  <div class="container legal"><?php ob_start(); ?><div class="prose">
     <h2>Who I am</h2>
     <p>This website is run by <?= e(cfg('legal_name')) ?>, trading as Studio Key (company no. <?= e(cfg('company_no')) ?>), registered office <?= e(cfg('office')) ?>. I'm the data controller for the personal data described here. You can reach me at <a href="mailto:<?= e(cfg('email')) ?>"><?= e(cfg('email')) ?></a> or on <?= e(cfg('phone_display')) ?>.</p>
 
@@ -75,7 +76,7 @@ include APP . '/partials/header.php';
 
     <h2>Changes</h2>
     <p>If I change this notice, I'll update the date at the top.</p>
-  </div></div>
+  </div><?= legal_with_toc((string) ob_get_clean()) ?></div>
 </section>
 </main>
 <?php include APP . '/partials/footer.php'; ?>
