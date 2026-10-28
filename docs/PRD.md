@@ -1,6 +1,6 @@
 # Studio Key hosting website: PRD
 
-Version 2.1, 28 Oct 2026. Replaces `docs/archive-original-prd.md`.
+Version 2.2, 28 Oct 2026. Replaces `docs/archive-original-prd.md`.
 
 Companion docs:
 - `.claude/skills/studio-key-hosting/SKILL.md`: business facts, claims, voice. Load before any task.
@@ -72,7 +72,7 @@ Use exactly as written below. Changes from Rich's supplied copy are marked.
 
 **Intro:** I'm Rich, an independent website hosting provider based in the East Midlands. I look after over 110 business websites, providing reliable, affordable hosting with transparent pricing and personal support directly from me.
 
-**H2:** Website hosting you can actually talk to someone about
+**H2:** Website hosting you can talk to someone about **["actually" removed, Rich confirmed 28 Oct]**
 
 If you're happy with a hosting provider that's difficult to contact, charges more than you expected, adds surprise yearly fees and treats you like just another account number, I'm probably not for you.
 
@@ -107,9 +107,8 @@ Keep your existing domain and website. There's no need to start again just to ge
 
 ### Copy flags (Rich to decide, build uses the locked text until then)
 
-1. The H2 uses "actually", which the copy standards ban. Option: "Website hosting with a person you can talk to".
-2. "£79+ yearly SSL and domain protection fees" is a claim about other providers. Keep only if Rich holds an example invoice or published price list. The mailbox shows a £178 third-party renewal notice, which is a stronger, evidenced example.
-3. "Free SSL certificates for life" appears in two lists. Fine for scanning, but one could become "Free migration, I move your site for you".
+1. "£79+" stays as written (Rich confirmed 28 Oct). The £178 renewal-notice example can support it in an FAQ.
+2. "Free SSL certificates for life" appears in two lists. Fine for scanning, but one could become "Free migration, I move your site for you".
 
 ### Copy Claude will draft (Rich approves before launch)
 
@@ -158,7 +157,7 @@ Never promise zero downtime. Copy: "I test your site on my server before anythin
 
 Modelled on the better UK and international hosts. Krystal gives a 60-day no-quibble refund minus domain costs; Kinsta gives 30 days, then refunds the unused time on annual plans.
 
-Studio Key terms (proposed, Rich to confirm):
+Studio Key terms (confirmed by Rich, 28 Oct):
 - **30-day money-back**: not happy in the first 30 days of a new hosting plan, you get the hosting fee back in full. Domain fees are non-refundable, and the domain stays yours.
 - **After 30 days**: give one month's notice at any time. I refund the unused full months of your yearly fee.
 - **Leaving is easy**: you get a full backup of your website free, and I help your new host get set up.
@@ -172,11 +171,11 @@ Studio Key terms (proposed, Rich to confirm):
 | SSL certificate and renewals | Rich | Rich |
 | Daily backups to AWS S3, restores on request | Rich | Rich |
 | WordPress core, plugin and theme updates | You (Rich can do them at £65/hr) | Rich |
-| Uptime monitoring | [confirm] | Rich |
-| Content changes | You | [confirm] |
+| Uptime monitoring | Rich | Rich |
+| Content changes | You (or £65/hr) | You (or £65/hr) |
 | Domain renewal (if registered with Rich) | Rich | Rich |
 
-Rows marked [confirm] are open items. This table also answers "what does Managed add?".
+This table also answers "what does Managed add?": updates to WordPress, plugins and themes.
 
 ## 8. Proof and trust
 
@@ -214,16 +213,23 @@ Display: on Home, show a short pull line from each (bolded hosting-relevant sent
 - Order on every page (progressive disclosure): outcome, then benefits, then proof, then detail. Technical detail lives in FAQs and expandable sections. Pricing and limits stay visible, never hidden.
 - Never "discovery call". Use "15-minute call" or "quick chat".
 - No "best hosting", no uptime percentages, no fake urgency or scarcity.
+- Every page speaks to both visitor types: people moving an existing site and people getting hosting for the first time.
 - Every draft passes the stop-slop and humanizer checks before Rich sees it.
 
 ### 9.1 CTAs (Hick's Law: one primary action)
 
+Research, Oct 2026: there is no reliable published test comparing "See options" with other labels for service businesses. Most "X% lift" figures come from vendor blogs with no method. What the better guidance agrees on: say what happens next, keep the commitment small, and match the visitor's intent. "Move my website" failed the intent test because it shuts out first-time buyers.
+
 | Role | Wording | Destination |
 |---|---|---|
-| Primary (one style, used everywhere) | **Move my website** | `/contact/?need=move` (step 1 preselected) |
+| Primary (one style, used everywhere) | **See your options** | `/contact/` step 1, which shows the options as one-tap cards |
 | Secondary (quiet text link) | See my prices | `/pricing/` |
-| Low-commitment first step | Get a free hosting check | Form, with "Not sure yet" preselected |
+| Contextual (inside sections, same quiet style) | Get a free hosting check / Moving from another host? | Form with the matching step 1 card preselected (`?need=check`, `?need=move`) |
 | Contact links | Call me / WhatsApp me / Send me a message | `tel:`, `wa.me`, form |
+
+Why "See your options": it promises the next screen and nothing more, it fits movers and first-timers, and the click delivers what it says (step 1 lists the options).
+
+Test plan: the primary label lives in `app/config.php`. Run "See your options" for 6 weeks, then "Talk to Rich" for 6 weeks, and compare form starts and completions per 100 visitors in GA4 and the event layer. Keep the winner.
 
 "Let's talk" stays inside the locked copy as text. The visitor always chooses how to get in touch: form, email, WhatsApp or call. No forced sales call.
 
@@ -250,8 +256,8 @@ On `/contact/` and at the bottom of `/`. One shared partial.
 
 | Step | Fields | Logic |
 |---|---|---|
-| 1. What do you need? | Radio cards: Move my website to you / Free hosting check / A new website / Not sure yet | Required. One tap. Preselected from `?need=` |
-| 2. Your website | Website address (optional), current host (shown for move and hosting check), "What's bugging you?" tick-boxes from the pain list (optional) | All optional to keep momentum |
+| 1. What would help? | Radio cards: Move my existing website / Hosting for a new website / A free check of my current hosting / Not sure yet | Required. One tap. Preselected from `?need=` (`move`, `new`, `check`) |
+| 2. Your website | Move or check: website address, current host, "What's bugging you?" tick-boxes from the pain list. New: domain name if you have one, "Do you need the website built too?" yes/no | All optional to keep momentum |
 | 3. Your details | Name, email, phone (optional), how should I reply: Call / WhatsApp / Email, message (optional) | Name and email required. Phone becomes required if Call or WhatsApp is chosen |
 
 - Progress indicator "Step 1 of 3". Back button keeps answers. Step changes animate gently (section 11.6).
@@ -266,7 +272,7 @@ On `/contact/` and at the bottom of `/`. One shared partial.
 ### 10.3 Contact routes on every page
 
 - Header: phone number (click to call) and the primary button.
-- Mobile: sticky bottom bar with Call, WhatsApp, Move my website. Hidden once the form is on screen.
+- Mobile: sticky bottom bar with Call, WhatsApp, See your options. Hidden once the form is on screen.
 - Footer: phone, WhatsApp, email, service area, legal line.
 
 ### 10.4 Analytics and tracking
@@ -420,7 +426,7 @@ WCAG 2.2 AA. Contrast 4.5:1 body, 3:1 large text and UI. Labelled fields, error 
 | 3. Media | Google organic (town pages later), Google Business Profile once reinstated, Rich's email campaign with UTMs |
 | 4. Capture | 3-step form, free hosting check, phone, WhatsApp |
 | 5. Nurture | Brevo list "Website enquiries". Short follow-up sequence in Rich's voice (later phase) |
-| 6. Convert | Quick chat, free migration, 30-day money-back, clear yearly price |
+| 6. Convert | Quick chat, free migration or new set-up, 30-day money-back, clear yearly price |
 | 7. Experience | Switch-over on a call, same-day replies, proactive security patching |
 | 8. Lifetime value | Standard to Managed, £65/hr fixes, domains, website builds and maintenance |
 | 9. Referrals | Ask after a quick fix or a smooth move. Google review request link (later phase) |
@@ -428,18 +434,14 @@ WCAG 2.2 AA. Contrast 4.5:1 body, 3:1 large text and UI. Labelled fields, error 
 ## 16. Open items for Rich
 
 Blocking design:
-1. Allow `studio-key.co.uk` in the session's network settings so I can capture colours, logo and fonts. Or send hex codes and the logo SVG.
+1. studio-key.co.uk returns 403 to this build environment. The block comes from the site's own server firewall (cPanel, LiteSpeed, QUIC.cloud), not the session's network settings. Either whitelist the environment for an hour, or send hex codes, the logo SVG and a full-page screenshot.
 
 Blocking launch:
-2. Confirm the cancellation and refund terms in 7.3.
-3. Fill the [confirm] rows in 7.4 (uptime monitoring on Standard, content changes on Managed).
+2. Old site URL list or sitemap for redirects (same block as item 1).
+3. About story and photo (lorem ipsum until then).
 4. Is free migration the same on both tiers, one site per plan?
-5. Source for "£79+", or switch to the £178 example.
-6. Keep "actually" in the H2?
-7. Google reviews public link and live review count.
-8. Old site URL list or sitemap for redirects (I can pull it once the domain is allowed).
-9. About story and photo (lorem ipsum until then).
 
 Parked (build works without them):
-10. Brevo API key, list ID, verified sender.
-11. GA4 measurement ID.
+5. Google reviews public link and live review count.
+6. Brevo API key, list ID, verified sender.
+7. GA4 measurement ID.

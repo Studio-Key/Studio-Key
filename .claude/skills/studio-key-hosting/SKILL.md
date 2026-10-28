@@ -40,13 +40,13 @@ Useful Rich analogies (reuse the idea, tidy the wording):
 
 | Item | Price | Notes |
 |---|---|---|
-| Standard hosting | £119 a year, all-inclusive | Free SSL for life, no domain-protection fees, no annual SSL billing, daily AWS S3 backups, direct support from Rich |
-| Managed hosting | £450 a year | Fully managed, daily AWS S3 backups, named human support. Exact extras: see PRD open items |
+| Standard hosting | £119 a year, all-inclusive | Free SSL for life, no domain-protection fees, no annual SSL billing, daily AWS S3 backups, uptime monitoring, direct support from Rich |
+| Managed hosting | £450 a year | Everything in Standard, plus Rich keeps WordPress, plugins and themes updated |
 | .co.uk / .uk domain | £14 a year | Only where Studio Key registers it |
 | .com domain | £22 a year | Only where Studio Key registers it |
 | Support, fixes, changes | £65 an hour | Rich quotes time up front |
 | Moving your site to Studio Key | Free | Rich does the migration |
-| Leaving | No lock-in | 30-day money-back on new plans, then one month's notice with unused full months refunded, free full backup to take away (PRD 7.3, pending Rich's sign-off) |
+| Leaving | No lock-in | 30-day money-back on new plans, then one month's notice with unused full months refunded, free full backup to take away (PRD 7.3, confirmed) |
 
 Customers keep their existing domain and website. Rich never pushes a domain transfer: "I never recommend moving a domain provider" unless there is a real gain for the customer.
 
@@ -112,7 +112,8 @@ Banned:
 - Prices stated up front.
 - No em dashes. No "actually". No adverbs unless removing one changes the meaning. No rule-of-three padding. No binary contrasts ("not X, it's Y"). Active voice.
 - Never write "discovery call". Use "15-minute call" or "quick chat".
-- Primary CTA everywhere: "Move my website". Secondary: "See my prices". Low-commitment: "Get a free hosting check". Contact: "Call me", "WhatsApp me", "Send me a message".
+- Primary CTA everywhere: "See your options" (label set in config, may change after testing). Secondary: "See my prices". Contextual: "Get a free hosting check", "Moving from another host?".
+- Speak to first-time buyers as well as people moving from another host. Contact: "Call me", "WhatsApp me", "Send me a message".
 - Plain English. No jargon above the fold (NVMe, LiteSpeed, PHP workers, Nginx).
 - Order: outcome, benefits, proof, detail.
 

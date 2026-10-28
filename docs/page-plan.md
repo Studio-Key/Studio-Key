@@ -6,9 +6,9 @@ Section order, purpose and tags for each page. `data-section` values are the tra
 
 | Area | Contents |
 |---|---|
-| Header | Logo (home link), nav: Pricing, About, Contact. Phone number (click to call). "Move my website" button |
+| Header | Logo (home link), nav: Pricing, About, Contact. Phone number (click to call). "See your options" button |
 | Mobile header | Logo, menu button, phone icon |
-| Mobile sticky bar | Call, WhatsApp, Move my website. Hidden once the form is on screen |
+| Mobile sticky bar | Call, WhatsApp, See your options. Hidden once the form is on screen |
 | Footer | Short line about Rich, nav, phone, WhatsApp, email, "Based in Corby, serving the East Midlands", privacy and terms links, legal line (company no. 11656826) |
 | Consent banner | Accept / Reject, plain wording, link to `/privacy/` |
 
@@ -18,13 +18,13 @@ Primary goal: start the form or call. Secondary: visit Pricing.
 
 | # | `data-section` | Content | CRO note |
 |---|---|---|---|
-| 1 | `hero` | Left: H1, intro (LOCKED), "Move my website" button + "See my prices" text link, micro-proof line "5-star Google reviews · 110+ business websites · Corby, East Midlands". Right: 5:4 video | Price and proof above the fold for Google visitors; video for email visitors |
+| 1 | `hero` | Left: H1, intro (LOCKED), "See your options" button + "See my prices" text link, micro-proof line "5-star Google reviews · 110+ business websites · Corby, East Midlands". Right: 5:4 video | Price and proof above the fold for Google visitors; video for email visitors |
 | 2 | `trust` | Logo strip: Green Web Foundation live badge, Powered by AWS, 5-star Google reviews | Small, honest captions |
-| 3 | `qualifier` | H2 + two paragraphs (LOCKED) | Ends on "let's talk": add "Move my website" button and "or get a free hosting check" link |
+| 3 | `qualifier` | H2 + two paragraphs (LOCKED) | Ends on "let's talk": add "See your options" button and "or get a free hosting check" link |
 | 4 | `promise` | H2 + 3 callouts with Phosphor icons (LOCKED) | |
 | 5 | `problems` | "Sound familiar?" list (LOCKED) | Two-column on desktop |
 | 6 | `solutions` | "A more straightforward approach" list + keep-your-domain line (LOCKED) | Sits beside or after problems for before/after contrast |
-| 7 | `how-it-works` | New copy: 4 steps (chat, I copy and test, we switch together, you deal with me) | Removes fear of moving. Mentions free migration |
+| 7 | `how-it-works` | New copy: 4 steps (chat, I copy and test, we switch together, you deal with me) | Removes fear of moving. Mentions free migration. Short second path: "New to hosting? I set everything up for you" |
 | 8 | `price-teaser` | "£119 a year. Under £10 a month, nothing added on." What's in, renewal price, link to Pricing | Anchors on the real price |
 | 8b | `reassurance` | Risk reversal: what free migration covers, 30-day money-back, free backup if you leave, who looks after what (short, links to Pricing) | Loss aversion, specific assurances |
 | 9 | `testimonials` | Three Google reviews (PRD 8.1): pull line, stars, name, "Read more" expands | Specific, not a wall |
@@ -71,7 +71,7 @@ Primary goal: submit the form or call.
 
 ## CRO checklist (all pages)
 
-- One primary CTA per section. Same wording everywhere ("Move my website"). Secondary actions are quiet text links.
+- One primary CTA per section. Same wording everywhere ("See your options", label from config). Secondary actions are quiet text links.
 - Phone number visible without scrolling on every page.
 - Price visible on Home within two scrolls.
 - No carousels, no pop-ups, no exit intent.
