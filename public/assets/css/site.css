@@ -713,8 +713,8 @@ html:not(.js) .step + .step { margin-top: var(--s-10); }
 .map__label { fill: var(--on-dark-2); font-family: var(--font); font-size: 16px; font-weight: 500; }
 .map__label--home { fill: var(--white); font-size: 18px; font-weight: 700; }
 @media (max-width: 639px) { .map__label { font-size: 22px; } .map__label--home { font-size: 26px; } .areas__map { padding: var(--s-2); } }
-.town-list { list-style: none; padding: 0; margin-top: var(--s-4); display: grid; grid-template-columns: repeat(2, max-content); gap: var(--s-2) var(--s-10); }
-@media (max-width: 379px) { .town-list { grid-template-columns: 1fr; } }
+.town-list { list-style: none; padding: 0; margin-top: var(--s-4); display: grid; grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); gap: var(--s-2) var(--s-6); }
+
 @media (min-width: 1024px) { .areas__list { padding-top: var(--s-8); } }
 .town-list li { display: flex; align-items: center; gap: var(--s-2); font-weight: 500; }
 .town-list .icon { width: 1rem; height: 1rem; color: var(--green-ink); }
