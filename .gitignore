@@ -5,3 +5,7 @@ storage/leads/*
 .DS_Store
 storage/app.key
 storage/cache-*.css
+
+# Impeccable: engine binary downloads on first run; hooks are per-machine
+.claude/skills/impeccable/scripts/bin/
+.claude/settings.local.json
