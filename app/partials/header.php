@@ -26,7 +26,7 @@ $current = $page['path'];
   </div>
 </header>
 
-<div id="mobile-menu" class="mobile-menu glass" popover>
+<div id="mobile-menu" class="mobile-menu panel" popover>
   <div class="mobile-menu__top">
     <span class="mobile-menu__title">Menu</span>
     <button class="menu-btn" type="button" popovertarget="mobile-menu" popovertargetaction="hide" aria-label="Close menu"><?= icon('x') ?></button>

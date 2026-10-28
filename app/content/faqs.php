@@ -13,7 +13,7 @@ return [
         ],
         'downtime' => [
             'q' => 'Will my website go offline while you move it?',
-            'a' => 'I copy your site to my server and test it privately first, while your current site keeps running. Then I switch over at a quiet time. Most moves go unnoticed by your visitors. To be fully transparent, nobody can promise zero downtime, but I plan for none.',
+            'a' => 'I copy your site to my server and test it privately first, while your current site keeps running. Then I switch over at a quiet time. Most moves go unnoticed by your visitors. Nobody can promise a move with no downtime at all, but I plan every switch to keep it short.',
         ],
         'first-time' => [
             'q' => 'I\'ve never had website hosting before. Can you help?',

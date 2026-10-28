@@ -23,8 +23,7 @@ include APP . '/partials/header.php';
 ?>
 <main id="main">
 
-<section class="hero section--dark ambient" data-section="hero" aria-labelledby="hero-title">
-  <canvas class="fx-grid" aria-hidden="true"></canvas>
+<section class="hero section--dark" data-section="hero" aria-labelledby="hero-title">
   <div class="container hero__grid">
     <div class="hero__copy">
       <h1 class="h1" id="hero-title">Personal website hosting, without the hidden costs</h1>
@@ -47,7 +46,7 @@ include APP . '/partials/header.php';
 
 <section class="section" data-section="qualifier" aria-labelledby="qualifier-title">
   <div class="container split">
-    <div class="split__main reveal">
+    <div class="split__main">
       <h2 class="h2" id="qualifier-title">Website hosting you can talk to someone about</h2>
       <p class="prose-lg">If you're happy with a hosting provider that's difficult to contact, charges more than you expected, adds surprise yearly fees and treats you like just another account number, I'm probably not for you.</p>
       <p class="prose-lg">But if you want straightforward, honest website hosting with clear pricing and someone you can speak to directly, without waiting in a support queue, let's talk.</p>
@@ -56,7 +55,7 @@ include APP . '/partials/header.php';
         <a class="link-quiet" href="/contact/?need=check#enquiry" data-cta="qualifier-check">Get a free hosting check <?= icon('arrow-right') ?></a>
       </div>
     </div>
-    <aside class="split__side reveal" data-section="promise" aria-labelledby="promise-title">
+    <aside class="split__side" data-section="promise" aria-labelledby="promise-title">
       <h2 class="h3" id="promise-title">Helping your business run reliably online</h2>
       <ul class="promise">
         <li>
@@ -76,14 +75,14 @@ include APP . '/partials/header.php';
   </div>
 </section>
 
-<section class="section section--dark ambient ambient--alt" data-section="problems" aria-labelledby="problems-title">
+<section class="section section--dark" data-section="problems" aria-labelledby="problems-title">
   <div class="container">
     <header class="section-head section-head--center">
-      <h2 class="h2">Hosting shouldn't come with surprises</h2>
+      <h2 class="h2" id="problems-title">Hosting shouldn't come with surprises</h2>
     </header>
     <div class="compare">
-      <div class="compare__col glass reveal">
-        <h2 class="h3" id="problems-title">Sound familiar?</h2>
+      <div class="compare__col panel">
+        <h3 class="h3">Sound familiar?</h3>
         <ul class="icon-list">
           <li><span class="li-icon li-icon--pain"><?= icon('currency-gbp') ?></span> Unexpected £79+ yearly SSL and domain protection fees</li>
           <li><span class="li-icon li-icon--pain"><?= icon('currency-gbp') ?></span> Paying more than you should for hosting</li>
@@ -93,8 +92,8 @@ include APP . '/partials/header.php';
           <li><span class="li-icon li-icon--pain"><?= icon('warning') ?></span> Slow, impersonal customer support</li>
         </ul>
       </div>
-      <div class="compare__col compare__col--good glass reveal" data-section="solutions">
-        <h2 class="h3">A more straightforward approach</h2>
+      <div class="compare__col compare__col--good panel" data-section="solutions">
+        <h3 class="h3">A more straightforward approach</h3>
         <ul class="icon-list">
           <li><span class="li-icon li-icon--good"><?= icon('check-circle') ?></span> Transparent, predictable pricing</li>
           <li><span class="li-icon li-icon--good"><?= icon('check-circle') ?></span> Free SSL certificates for life</li>
@@ -106,46 +105,94 @@ include APP . '/partials/header.php';
         </ul>
       </div>
     </div>
-    <p class="compare__note reveal"><?= icon('arrows-left-right') ?> Keep your existing domain and website. There's no need to start again just to get better hosting.</p>
+    <p class="compare__note"><?= icon('arrows-left-right') ?> Keep your existing domain and website. There's no need to start again just to get better hosting.</p>
   </div>
 </section>
 
 <section class="section" data-section="how-it-works" aria-labelledby="how-title">
   <div class="container">
-    <header class="section-head reveal">
+    <header class="section-head section-head--aside">
       <h2 class="h2" id="how-title">Your website moves over, your email carries on as normal</h2>
       <p class="lead lead--dark">I do the moving. Nothing to do from your end.</p>
     </header>
     <ol class="steps-list">
-      <li class="reveal">
+      <li>
         <span class="steps-list__num">1</span>
         <h3 class="h4">A quick chat</h3>
         <p>Call, WhatsApp or send a message. I find out where your website, email and domain live, so nothing gets missed.</p>
       </li>
-      <li class="reveal">
+      <li>
         <span class="steps-list__num">2</span>
         <h3 class="h4">I copy and test it</h3>
         <p>I copy your site to my server and test it privately. Your current site keeps running the whole time.</p>
       </li>
-      <li class="reveal">
+      <li>
         <span class="steps-list__num">3</span>
         <h3 class="h4">I switch it over</h3>
         <p>I make the switch at a quiet time, on a call with you if you like. Most moves go unnoticed by your visitors.</p>
       </li>
-      <li class="reveal">
+      <li>
         <span class="steps-list__num">4</span>
         <h3 class="h4">You deal with me</h3>
         <p>From then on, you have my number. No tickets, no queue, and the same person every time.</p>
       </li>
     </ol>
-    <p class="aside-note aside-note--wide reveal"><?= icon('sparkle') ?> <span><strong>New to hosting?</strong> I'll set up your hosting, SSL and email from scratch, and explain each part in plain English as I go. <a href="/contact/?need=new#enquiry" data-cta="how-new">Start here</a>.</span></p>
+    <p class="aside-note"><?= icon('sparkle') ?> <span><strong>New to hosting?</strong> I'll set up your hosting, SSL and email from scratch, and explain each part in plain English as I go. <a href="/contact/?need=new#enquiry" data-cta="how-new">Start here</a>.</span></p>
+  </div>
+</section>
+
+
+<section class="section section--dark" data-section="price-teaser" aria-labelledby="price-title">
+  <div class="container">
+    <header class="section-head">
+      <h2 class="h2" id="price-title">One price a year, with nothing added on</h2>
+    </header>
+    <div class="price-teaser">
+      <div class="price-teaser__card panel">
+        <p class="price-teaser__name">Standard hosting</p>
+        <p class="price"><span class="price__amount"><?= money($std['price']) ?></span><span class="price__per">a year</span></p>
+        <p class="price__sub">That's <?= e($std['monthly']) ?>. Billed yearly in advance, renews at <?= money($std['price']) ?>. No VAT to add.</p>
+        <ul class="ticks ticks--light">
+          <?php foreach ($std['features'] as $f): ?>
+            <li><?= icon('check') ?> <?= e($f) ?></li>
+          <?php endforeach; ?>
+        </ul>
+        <div class="inline-actions">
+          <a class="btn btn--primary" href="/contact/?plan=standard#enquiry" data-cta="teaser-primary"><?= e(cfg('cta_primary')) ?> <?= icon('arrow-right') ?></a>
+          <a class="link-quiet" href="/pricing/" data-cta="teaser-pricing">See my prices <?= icon('arrow-right') ?></a>
+        </div>
+        <p class="price-teaser__alt">Want me to keep WordPress, plugins and themes updated too? <strong>Managed hosting is <?= money(cfg('plans')['managed']['price']) ?> a year.</strong></p>
+      </div>
+      <div class="reassure" data-section="reassurance">
+        <h3 class="h3">Your safety net</h3>
+        <dl class="reassure__list">
+          <div>
+            <dt><?= icon('truck') ?> Moving is free</dt>
+            <dd>One website per plan. I copy it, test it privately and switch it over. Your email keeps running.</dd>
+          </div>
+          <div>
+            <dt><?= icon('arrow-counter-clockwise') ?> 30-day money-back</dt>
+            <dd>Not happy in the first 30 days of a new plan? I refund the hosting fee in full.</dd>
+          </div>
+          <div>
+            <dt><?= icon('door-open') ?> Leave when you like</dt>
+            <dd>Give me a month's notice. I refund the unused full months and hand you a full backup, free.</dd>
+          </div>
+          <div>
+            <dt><?= icon('receipt') ?> No surprise renewals</dt>
+            <dd>You renew at the price you paid. If that ever changes, I'll write to you 30 days before.</dd>
+          </div>
+        </dl>
+        <a class="link-quiet" href="/pricing/#who-does-what" data-cta="reassure-duties">Who looks after what <?= icon('arrow-right') ?></a>
+      </div>
+    </div>
   </div>
 </section>
 
 
 <section class="section section--paper" data-section="testimonials" aria-labelledby="reviews-title">
   <div class="container">
-    <header class="section-head section-head--split reveal">
+    <header class="section-head section-head--split">
       <div>
         <h2 class="h2" id="reviews-title">What clients say on Google</h2>
       </div>
@@ -159,7 +206,7 @@ include APP . '/partials/header.php';
 
 <section class="section" data-section="faq" aria-labelledby="faq-title">
   <div class="container split split--faq">
-    <header class="split__side reveal">
+    <header class="split__side">
       <h2 class="h2" id="faq-title">Questions people ask before they move</h2>
       <p class="lead lead--dark">Something else on your mind? <a href="tel:<?= e(cfg('phone_e164')) ?>" data-contact="phone">Call me</a> or <a href="<?= e(cfg('whatsapp')) ?>" rel="noopener" target="_blank" data-contact="whatsapp">send a WhatsApp</a>.</p>
       <div class="mini-person">
@@ -173,13 +220,13 @@ include APP . '/partials/header.php';
   </div>
 </section>
 
-<section class="section section--dark ambient ambient--alt" id="enquiry" data-section="enquiry" aria-labelledby="enquiry-title">
+<section class="section section--dark" id="enquiry" data-section="enquiry" aria-labelledby="enquiry-title">
   <div class="container enquiry-wrap">
-    <div class="enquiry-wrap__intro reveal">
+    <div class="enquiry-wrap__intro">
       <h2 class="h2" id="enquiry-title">Tell me what you need</h2>
-      <p class="lead">Moving a site or starting from scratch, I'll tell you what I'd do and what it costs. Absolutely no pressure from my end.</p>
+      <p class="lead">Moving a site or starting from scratch, I'll tell you what I'd do and what it costs. No pressure from my end.</p>
     </div>
-    <div class="enquiry-wrap__form glass">
+    <div class="enquiry-wrap__form panel">
       <?php include APP . '/partials/enquiry-form.php'; ?>
     </div>
     <div class="enquiry-wrap__more">

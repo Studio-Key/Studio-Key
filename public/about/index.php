@@ -23,7 +23,7 @@ include APP . '/partials/header.php';
 ?>
 <main id="main">
 
-<section class="page-hero section--dark ambient" data-section="about-hero" aria-labelledby="about-title">
+<section class="page-hero section--dark" data-section="about-hero" aria-labelledby="about-title">
   <div class="container about-hero">
     <div class="about-hero__copy">
       <h1 class="h1" id="about-title">Hello, I'm Rich. I look after your website so you don't have to.</h1>
@@ -34,7 +34,7 @@ include APP . '/partials/header.php';
       </div>
     </div>
     <div class="about-hero__photo">
-      <figure class="portrait glass">
+      <figure class="portrait panel">
         <div class="portrait__img" role="img" aria-label="Photo of Rich coming soon"><span aria-hidden="true">R</span></div>
         <figcaption><strong>Rich</strong> Corby, Northamptonshire</figcaption>
       </figure>
@@ -52,7 +52,7 @@ include APP . '/partials/header.php';
     </div>
     <aside class="split__side" data-section="also" aria-labelledby="also-title">
       <h2 class="h3" id="also-title">I also build websites</h2>
-      <p class="lead--dark">Hosting is what I do most, but I also design, build and look after websites for local businesses. If your site needs more than a new home, I can help with that too.</p>
+      <p>Hosting is what I do most, but I also design, build and look after websites for local businesses. If your site needs more than a new home, I can help with that too.</p>
       <p><a class="link-quiet" href="/contact/?need=new#enquiry" data-cta="about-build">Talk to me about a new website <?= icon('arrow-right') ?></a></p>
     </aside>
   </div>
@@ -60,7 +60,7 @@ include APP . '/partials/header.php';
 
 <section class="section section--paper" data-section="how-i-work" aria-labelledby="work-title">
   <div class="container">
-    <header class="section-head">
+    <header class="section-head section-head--aside">
       <h2 class="h2" id="work-title">How I work</h2>
       <p class="lead lead--dark">The same way I'd want my own website looked after.</p>
     </header>
@@ -87,7 +87,7 @@ include APP . '/partials/header.php';
 
 <section class="section" data-section="areas" aria-labelledby="areas-title">
   <div class="container">
-    <header class="section-head">
+    <header class="section-head section-head--aside">
       <h2 class="h2" id="areas-title">Website hosting across the East Midlands</h2>
       <p class="lead lead--dark">I'm based in Corby and look after businesses across Northamptonshire and the surrounding counties. Further afield? Happy to help over the phone.</p>
     </header>

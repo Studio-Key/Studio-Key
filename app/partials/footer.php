@@ -48,13 +48,13 @@
 </footer>
 
 <?php if (!in_array($page['id'], ['privacy', 'terms'], true)): ?>
-<nav class="sticky-bar glass" aria-label="Quick contact" data-section="sticky-bar">
+<nav class="sticky-bar panel" aria-label="Quick contact" data-section="sticky-bar">
   <a href="tel:<?= e(cfg('phone_e164')) ?>" data-contact="phone" data-cta="sticky-call"><?= icon('phone') ?><span>Call</span></a>
+  <a href="<?= e(cfg('whatsapp')) ?>" rel="noopener" target="_blank" data-contact="whatsapp" data-cta="sticky-whatsapp"><?= icon('brand-whatsapp') ?><span>WhatsApp</span></a>
   <a class="sticky-bar__primary" href="/contact/" data-cta="sticky-primary"><?= e(cfg('cta_primary')) ?></a>
 </nav>
 <?php endif; ?>
 
-<a class="wa-float" href="<?= e(cfg('whatsapp')) ?>" rel="noopener" target="_blank" aria-label="WhatsApp Rich on <?= e(cfg('phone_display')) ?>" data-contact="whatsapp" data-cta="float-whatsapp"><?= icon('brand-whatsapp') ?></a>
 
 <?php include APP . '/partials/consent.php'; ?>
 <?php foreach ($page['scripts'] ?? [] as $script): ?>

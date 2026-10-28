@@ -143,7 +143,7 @@ if ($plan !== '' && $pre === '') {
 
 <div class="enquiry-done" id="<?= e($fid) ?>-done" hidden tabindex="-1">
   <?= icon('check-circle', 'icon enquiry-done__icon') ?>
-  <h3 class="enquiry-done__title">Thanks, <span data-done-name>I've got it</span>.</h3>
+  <?php $done_tag = $done_heading ?? 'h3'; ?><<?= $done_tag ?> class="enquiry-done__title">Thanks, <span data-done-name>I've got it</span>.</<?= $done_tag ?>>
   <p>I'll reply today or the next working day. If it's urgent, call or WhatsApp me.</p>
   <div class="enquiry-done__actions">
     <a class="btn btn--light btn--sm" href="tel:<?= e(cfg('phone_e164')) ?>" data-contact="phone"><?= icon('phone') ?> <?= e(cfg('phone_display')) ?></a>

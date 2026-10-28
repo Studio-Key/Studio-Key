@@ -2,9 +2,9 @@
 /** End-of-page call to action. Optional $cta_title and $cta_text. */
 defined('SK_APP') || exit;
 ?>
-<section class="section section--dark ambient cta-band" data-section="cta">
+<section class="section section--dark cta-band" data-section="cta">
   <div class="container">
-    <div class="cta-band__inner glass">
+    <div class="cta-band__inner panel">
       <div>
         <h2 class="h2"><?= e($cta_title ?? 'Ready to make hosting one less thing to think about?') ?></h2>
         <p class="lead"><?= e($cta_text ?? 'Tell me what you have now, or what you need. I\'ll reply today or the next working day, and there\'s no obligation.') ?></p>

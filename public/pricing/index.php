@@ -58,10 +58,10 @@ include APP . '/partials/header.php';
 ?>
 <main id="main">
 
-<section class="page-hero page-hero--tight section--dark ambient" data-section="pricing-hero" aria-labelledby="pricing-title">
+<section class="page-hero page-hero--tight section--dark" data-section="pricing-hero" aria-labelledby="pricing-title">
   <div class="container">
     <h1 class="h1" id="pricing-title">The price you see is the price you pay</h1>
-    <p class="lead">From <strong class="text-white">£119 a year, all in</strong>. One bill a year. No VAT, no SSL fees and no domain protection charges. If a price ever changes, I'll tell you in writing 30 days before.</p>
+    <p class="lead">Standard hosting is <strong class="text-white">£119 a year, all in</strong>. One bill a year. No VAT, no SSL fees and no domain protection charges. If a price ever changes, I'll tell you in writing 30 days before.</p>
   </div>
 </section>
 
@@ -117,7 +117,7 @@ include APP . '/partials/header.php';
 
 <section class="section section--paper" id="who-does-what" data-section="included" aria-labelledby="duties-title">
   <div class="container">
-    <header class="section-head">
+    <header class="section-head section-head--aside">
       <h2 class="h2" id="duties-title">Who looks after what</h2>
       <p class="lead lead--dark">So you always know who's doing what. If it's my job, it's in the price.</p>
     </header>
@@ -136,7 +136,7 @@ include APP . '/partials/header.php';
 
 <section class="section" data-section="terms" aria-labelledby="terms-title">
   <div class="container">
-    <header class="section-head">
+    <header class="section-head section-head--aside">
       <h2 class="h2" id="terms-title">The terms, in plain English</h2>
       <p class="lead lead--dark">The short version. The full details are on my <a href="/terms/">hosting terms</a> page.</p>
     </header>
@@ -160,7 +160,7 @@ include APP . '/partials/header.php';
       </div>
       <div class="term">
         <h3 class="h4"><?= icon('clock-countdown') ?> Downtime</h3>
-        <p>I test your site on my server before anything switches, and I make the switch at a quiet time. Most moves go unnoticed. To be fully transparent, nobody can promise zero downtime.</p>
+        <p>I test your site on my server before anything switches, and I make the switch at a quiet time. Most moves go unnoticed. Nobody can promise a move with no downtime at all, so I plan every switch to keep it short.</p>
       </div>
     </div>
   </div>

@@ -83,5 +83,5 @@ return [
     'green_check_url' => 'https://www.thegreenwebfoundation.org/green-web-check/?url=www.studio-key.co.uk',
 
     // Bump when CSS or JS changes so browsers fetch the new file.
-    'asset_version' => '1',
+    'asset_version' => '2',
 ];

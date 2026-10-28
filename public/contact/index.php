@@ -15,14 +15,14 @@ include APP . '/partials/header.php';
 ?>
 <main id="main">
 
-<section class="page-hero section--dark ambient" id="enquiry" data-section="enquiry" aria-labelledby="contact-title">
+<section class="page-hero section--dark" id="enquiry" data-section="enquiry" aria-labelledby="contact-title">
   <div class="container enquiry-wrap">
     <div class="enquiry-wrap__intro">
       <h1 class="h1" id="contact-title">Let's see what would work for you</h1>
       <p class="lead">Moving a website, starting from scratch, or want a second opinion on what you pay now? Tell me a little and I'll reply today or the next working day.</p>
     </div>
-    <div class="enquiry-wrap__form glass">
-      <?php include APP . '/partials/enquiry-form.php'; ?>
+    <div class="enquiry-wrap__form panel">
+      <?php $done_heading = 'h2'; include APP . '/partials/enquiry-form.php'; ?>
     </div>
     <div class="enquiry-wrap__more">
       <div class="person">

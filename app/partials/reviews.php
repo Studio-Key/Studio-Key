@@ -8,7 +8,7 @@ $reviews = require APP . '/content/reviews.php';
       <div class="stars" role="img" aria-label="5 out of 5 stars"><?= str_repeat(icon('star-fill', 'icon star'), 5) ?></div>
       <blockquote class="review__pull"><p>&ldquo;<?= e($r['pull']) ?>&rdquo;</p></blockquote>
       <button type="button" class="review__more" popovertarget="review-<?= e($slug) ?>">Read the full review</button>
-      <div class="review-pop glass" id="review-<?= e($slug) ?>" popover data-review-full="<?= e($slug) ?>">
+      <div class="review-pop panel" id="review-<?= e($slug) ?>" popover data-review-full="<?= e($slug) ?>">
         <button type="button" class="review-pop__close" popovertarget="review-<?= e($slug) ?>" popovertargetaction="hide" aria-label="Close review"><?= icon('x') ?></button>
         <span class="review-pop__mark" aria-hidden="true">&ldquo;</span>
         <div class="stars stars--sm" aria-hidden="true"><?= str_repeat(icon('star-fill', 'icon star'), 5) ?></div>
