@@ -60,9 +60,8 @@ include APP . '/partials/header.php';
 
 <section class="page-hero page-hero--tight section--dark ambient" data-section="pricing-hero" aria-labelledby="pricing-title">
   <div class="container">
-    <p class="eyebrow"><?= icon('tag') ?> Pricing</p>
     <h1 class="h1" id="pricing-title">The price you see is the price you pay</h1>
-    <p class="lead">From <strong class="text-white">£119 a year, all in</strong>. Billed once a year, no VAT to add, no SSL fees, no domain protection charges, and no price rises without 30 days' notice in writing.</p>
+    <p class="lead">From <strong class="text-white">£119 a year, all in</strong>. One bill a year. No VAT, no SSL fees and no domain protection charges. If a price ever changes, I'll tell you in writing 30 days before.</p>
   </div>
 </section>
 
@@ -120,7 +119,7 @@ include APP . '/partials/header.php';
   <div class="container">
     <header class="section-head">
       <h2 class="h2" id="duties-title">Who looks after what</h2>
-      <p class="lead lead--dark">Clear lines, so nothing falls between the gaps. If it's my job, it's included in your price.</p>
+      <p class="lead lead--dark">So you always know who's doing what. If it's my job, it's in the price.</p>
     </header>
     <div class="table-wrap" role="region" aria-labelledby="duties-title" tabindex="0">
       <table class="duties">
@@ -139,7 +138,7 @@ include APP . '/partials/header.php';
   <div class="container">
     <header class="section-head">
       <h2 class="h2" id="terms-title">The terms, in plain English</h2>
-      <p class="lead lead--dark">The full version is on my <a href="/terms/">hosting terms</a> page. Here's what matters.</p>
+      <p class="lead lead--dark">The short version. The full details are on my <a href="/terms/">hosting terms</a> page.</p>
     </header>
     <div class="terms-grid">
       <div class="term" id="migration">
@@ -161,7 +160,7 @@ include APP . '/partials/header.php';
       </div>
       <div class="term">
         <h3 class="h4"><?= icon('clock-countdown') ?> Downtime</h3>
-        <p>I test your site on my server before anything switches, and I make the switch at a quiet time. Most moves go unnoticed. I won't promise zero downtime, because nobody honestly can.</p>
+        <p>I test your site on my server before anything switches, and I make the switch at a quiet time. Most moves go unnoticed. To be fully transparent, nobody can promise zero downtime.</p>
       </div>
     </div>
   </div>
@@ -173,7 +172,6 @@ include APP . '/partials/header.php';
       <h2 class="h2" id="pfaq-title">Pricing questions</h2>
       <p class="lead lead--dark">Anything I haven't covered? <a href="tel:<?= e(cfg('phone_e164')) ?>" data-contact="phone">Call me</a> and ask.</p>
       <div class="mini-person">
-        <span class="person__avatar" aria-hidden="true">R</span>
         <span><strong>Ask me directly</strong><span>Usually a same-day reply</span></span>
         <a class="btn btn--ghost btn--sm" href="tel:<?= e(cfg('phone_e164')) ?>" data-contact="phone" data-cta="faq-call"><?= icon('phone') ?> <?= e(cfg('phone_display')) ?></a>
       </div>

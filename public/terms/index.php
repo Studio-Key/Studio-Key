@@ -15,7 +15,6 @@ include APP . '/partials/header.php';
 <main id="main">
 <section class="page-hero section--dark" data-section="terms-hero" aria-labelledby="terms-title">
   <div class="container">
-    <p class="eyebrow"><?= icon('scales') ?> Legal</p>
     <h1 class="h1" id="terms-title">Hosting terms, in plain English</h1>
     <p class="lead">The agreement between you and <?= e(cfg('legal_name')) ?>, trading as Studio Key. Last updated <?= $updated ?>.</p>
   </div>

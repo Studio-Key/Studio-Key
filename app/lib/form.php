@@ -16,7 +16,7 @@ function form_needs(): array
         'move'  => ['label' => 'Move my existing website', 'hint' => 'I move it for you, free'],
         'new'   => ['label' => 'Hosting for a new website', 'hint' => 'First time, or a new domain'],
         'check' => ['label' => 'A free check of my current hosting', 'hint' => 'What you pay for, and what you get'],
-        'unsure' => ['label' => 'Not sure yet', 'hint' => 'Tell me a bit and I\'ll point you the right way'],
+        'unsure' => ['label' => 'Not sure yet', 'hint' => 'Tell me a bit and I\'ll point you in the right direction'],
     ];
 }
 

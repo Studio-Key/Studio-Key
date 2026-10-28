@@ -7,11 +7,11 @@
     </a>
   </li>
   <li class="trust__item">
-    <?= icon('google-logo', 'icon trust__icon') ?>
+    <?= icon('brand-google', 'icon trust__icon') ?>
     <span><strong>5-star Google reviews</strong><span class="stars stars--sm" role="img" aria-label="5 out of 5 stars"><?= str_repeat(icon('star-fill', 'icon star'), 5) ?></span></span>
   </li>
   <li class="trust__item">
-    <?= icon('cloud-check', 'icon trust__icon') ?>
+    <?= icon('brand-aws', 'icon trust__icon trust__icon--aws') ?>
     <span><strong>Daily backups</strong> stored on Amazon Web Services</span>
   </li>
   <li class="trust__item">

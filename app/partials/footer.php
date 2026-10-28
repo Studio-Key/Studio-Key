@@ -24,7 +24,7 @@
         <h2 class="site-footer__heading">Get in touch</h2>
         <ul>
           <li><a href="tel:<?= e(cfg('phone_e164')) ?>" data-contact="phone" data-cta="footer-call"><?= icon('phone') ?> <?= e(cfg('phone_display')) ?></a></li>
-          <li><a href="<?= e(cfg('whatsapp')) ?>" rel="noopener" target="_blank" data-contact="whatsapp" data-cta="footer-whatsapp"><?= icon('whatsapp-logo') ?> WhatsApp me</a></li>
+          <li><a href="<?= e(cfg('whatsapp')) ?>" rel="noopener" target="_blank" data-contact="whatsapp" data-cta="footer-whatsapp"><?= icon('brand-whatsapp') ?> WhatsApp me</a></li>
           <li><a href="mailto:<?= e(cfg('email')) ?>" data-contact="email" data-cta="footer-email"><?= icon('envelope-simple') ?> <?= e(cfg('email')) ?></a></li>
           <li class="site-footer__hours"><?= e(cfg('hours')) ?></li>
         </ul>
@@ -50,10 +50,11 @@
 <?php if (!in_array($page['id'], ['privacy', 'terms'], true)): ?>
 <nav class="sticky-bar glass" aria-label="Quick contact" data-section="sticky-bar">
   <a href="tel:<?= e(cfg('phone_e164')) ?>" data-contact="phone" data-cta="sticky-call"><?= icon('phone') ?><span>Call</span></a>
-  <a href="<?= e(cfg('whatsapp')) ?>" rel="noopener" target="_blank" data-contact="whatsapp" data-cta="sticky-whatsapp"><?= icon('whatsapp-logo') ?><span>WhatsApp</span></a>
   <a class="sticky-bar__primary" href="/contact/" data-cta="sticky-primary"><?= e(cfg('cta_primary')) ?></a>
 </nav>
 <?php endif; ?>
+
+<a class="wa-float" href="<?= e(cfg('whatsapp')) ?>" rel="noopener" target="_blank" aria-label="WhatsApp Rich on <?= e(cfg('phone_display')) ?>" data-contact="whatsapp" data-cta="float-whatsapp"><?= icon('brand-whatsapp') ?></a>
 
 <?php include APP . '/partials/consent.php'; ?>
 <?php foreach ($page['scripts'] ?? [] as $script): ?>

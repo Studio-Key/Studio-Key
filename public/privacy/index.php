@@ -15,7 +15,6 @@ include APP . '/partials/header.php';
 <main id="main">
 <section class="page-hero section--dark" data-section="privacy-hero" aria-labelledby="privacy-title">
   <div class="container">
-    <p class="eyebrow"><?= icon('scales') ?> Legal</p>
     <h1 class="h1" id="privacy-title">Privacy and cookies</h1>
     <p class="lead">What I collect, why, who else sees it, and how to ask me to delete it. Last updated <?= $updated ?>.</p>
   </div>

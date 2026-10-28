@@ -13,11 +13,10 @@ $reviews = require APP . '/content/reviews.php';
         <span class="review-pop__mark" aria-hidden="true">&ldquo;</span>
         <div class="stars stars--sm" aria-hidden="true"><?= str_repeat(icon('star-fill', 'icon star'), 5) ?></div>
         <p class="review-pop__text"><?= e($r['text']) ?></p>
-        <p class="review-pop__by"><span class="review__avatar" aria-hidden="true"><?= e(mb_substr($r['name'], 0, 1)) ?></span><span><strong><?= e($r['name']) ?></strong><span class="review__src"><?= icon('google-logo', 'icon icon--sm') ?> Google review</span></span></p>
+        <p class="review-pop__by"><span><strong><?= e($r['name']) ?></strong><span class="review__src"><?= icon('brand-google', 'icon icon--sm') ?> Google review</span></span></p>
       </div>
       <figcaption class="review__by">
-        <span class="review__avatar" aria-hidden="true"><?= e(mb_substr($r['name'], 0, 1)) ?></span>
-        <span><strong><?= e($r['name']) ?></strong><span class="review__src"><?= icon('google-logo', 'icon icon--sm') ?> Google review</span></span>
+        <span><strong><?= e($r['name']) ?></strong><span class="review__src"><?= icon('brand-google', 'icon icon--sm') ?> Google review</span></span>
       </figcaption>
     </figure>
   <?php endforeach; ?>

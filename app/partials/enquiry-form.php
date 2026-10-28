@@ -147,6 +147,6 @@ if ($plan !== '' && $pre === '') {
   <p>I'll reply today or the next working day. If it's urgent, call or WhatsApp me.</p>
   <div class="enquiry-done__actions">
     <a class="btn btn--light btn--sm" href="tel:<?= e(cfg('phone_e164')) ?>" data-contact="phone"><?= icon('phone') ?> <?= e(cfg('phone_display')) ?></a>
-    <a class="btn btn--light btn--sm" href="<?= e(cfg('whatsapp')) ?>" rel="noopener" target="_blank" data-contact="whatsapp"><?= icon('whatsapp-logo') ?> WhatsApp</a>
+    <a class="btn btn--light btn--sm" href="<?= e(cfg('whatsapp')) ?>" rel="noopener" target="_blank" data-contact="whatsapp"><?= icon('brand-whatsapp') ?> WhatsApp</a>
   </div>
 </div>

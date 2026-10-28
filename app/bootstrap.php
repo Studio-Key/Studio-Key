@@ -169,7 +169,7 @@ function csp_nonce(): string
  * Tiny inline script that flags JS support before first paint, so the form's steps don't jump.
  * If form.js never loads, it removes the flag and the form falls back to one long page. Allowed by CSP hash.
  */
-const JS_FLAG = "var d=document.documentElement;d.classList.add('js');setTimeout(function(){if(!window.SKF&&document.querySelector('[data-form]'))d.classList.remove('js')},6000)";
+const JS_FLAG = "var d=document.documentElement;d.classList.add('js');setTimeout(function(){if(!window.SK||(!window.SKF&&document.querySelector('[data-form]')))d.classList.remove('js')},6000)";
 
 /* ---------- Security headers ---------- */
 

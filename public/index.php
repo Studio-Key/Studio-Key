@@ -24,30 +24,24 @@ include APP . '/partials/header.php';
 <main id="main">
 
 <section class="hero section--dark ambient" data-section="hero" aria-labelledby="hero-title">
+  <canvas class="fx-grid" aria-hidden="true"></canvas>
   <div class="container hero__grid">
     <div class="hero__copy">
-      <p class="eyebrow"><?= icon('map-pin') ?> Website hosting in Corby and the East Midlands</p>
       <h1 class="h1" id="hero-title">Personal website hosting, without the hidden costs</h1>
       <p class="lead">I'm Rich, an independent website hosting provider based in the East Midlands. I look after over 110 business websites, providing reliable, affordable hosting with transparent pricing and personal support directly from me.</p>
       <div class="hero__actions">
         <a class="btn btn--primary btn--lg" href="/contact/" data-cta="hero-primary"><?= e(cfg('cta_primary')) ?> <?= icon('arrow-right') ?></a>
         <a class="link-quiet link-quiet--light" href="/pricing/" data-cta="hero-pricing">See my prices <?= icon('arrow-right') ?></a>
       </div>
-      <ul class="hero__proof">
-        <li><?= icon('tag') ?> <?= money($std['price']) ?> a year, all in</li>
-        <li><?= icon('lock-simple') ?> Free SSL for life</li>
-        <li><?= icon('truck') ?> Free migration</li>
-      </ul>
     </div>
     <div class="hero__media">
       <?php include APP . '/partials/video.php'; ?>
     </div>
   </div>
-</section>
-
-<section class="trust-band" data-section="trust" aria-label="Why you can trust this hosting">
-  <div class="container">
-    <?php include APP . '/partials/trust-logos.php'; ?>
+  <div class="hero__trust" data-section="trust">
+    <div class="container">
+      <?php include APP . '/partials/trust-logos.php'; ?>
+    </div>
   </div>
 </section>
 
@@ -71,7 +65,7 @@ include APP . '/partials/header.php';
         </li>
         <li>
           <span class="promise__icon"><?= icon('lock-key') ?></span>
-          <span><strong>Free SSL certificates for life</strong><span>The browser padlock, renewed for you and never billed.</span></span>
+          <span><strong>Free SSL certificates for life</strong><span>The padlock in the browser. I renew it, you never pay for it.</span></span>
         </li>
         <li>
           <span class="promise__icon"><?= icon('cloud-arrow-up') ?></span>
@@ -85,7 +79,6 @@ include APP . '/partials/header.php';
 <section class="section section--dark ambient ambient--alt" data-section="problems" aria-labelledby="problems-title">
   <div class="container">
     <header class="section-head section-head--center">
-      <p class="eyebrow">Why people move to me</p>
       <h2 class="h2">Hosting shouldn't come with surprises</h2>
     </header>
     <div class="compare">
@@ -120,9 +113,8 @@ include APP . '/partials/header.php';
 <section class="section" data-section="how-it-works" aria-labelledby="how-title">
   <div class="container">
     <header class="section-head reveal">
-      <p class="eyebrow eyebrow--dark">How moving to me works</p>
       <h2 class="h2" id="how-title">Your website moves over, your email carries on as normal</h2>
-      <p class="lead lead--dark">I do the moving. You carry on running your business.</p>
+      <p class="lead lead--dark">I do the moving. Nothing to do from your end.</p>
     </header>
     <ol class="steps-list">
       <li class="reveal">
@@ -150,42 +142,12 @@ include APP . '/partials/header.php';
   </div>
 </section>
 
-<section class="section section--dark ambient" data-section="price-teaser" aria-labelledby="price-title">
-  <div class="container price-teaser">
-    <div class="price-teaser__card glass reveal">
-      <p class="eyebrow">Standard hosting</p>
-      <h2 class="h2" id="price-title">One price, everything included</h2>
-      <p class="price"><span class="price__amount"><?= money($std['price']) ?></span><span class="price__per">a year</span></p>
-      <p class="price__sub">That's <?= e($std['monthly']) ?>. No VAT to add. Renews at <?= money($std['price']) ?>.</p>
-      <ul class="ticks ticks--light">
-        <?php foreach (array_slice($std['features'], 0, 5) as $f): ?>
-          <li><?= icon('check') ?> <?= e($f) ?></li>
-        <?php endforeach; ?>
-      </ul>
-      <div class="inline-actions">
-        <a class="btn btn--primary" href="/contact/" data-cta="price-primary"><?= e(cfg('cta_primary')) ?> <?= icon('arrow-right') ?></a>
-        <a class="link-quiet link-quiet--light" href="/pricing/" data-cta="price-pricing">Compare both plans</a>
-      </div>
-    </div>
-    <div class="reassure reveal" data-section="reassurance">
-      <h3 class="h3">If something worries you about moving</h3>
-      <dl class="reassure__list">
-        <div><dt><?= icon('truck') ?> Free migration</dt><dd>I move one website per plan for you, files, database and all, and check your email still works.</dd></div>
-        <div><dt><?= icon('arrow-counter-clockwise') ?> 30-day money-back</dt><dd>Not happy in the first 30 days? I refund your hosting fee in full.</dd></div>
-        <div><dt><?= icon('door-open') ?> Easy to leave</dt><dd>One month's notice, unused months refunded, and a full backup of your site to take with you.</dd></div>
-        <div><dt><?= icon('shield-check') ?> Clear responsibilities</dt><dd>I look after the server, security, SSL and backups. <a class="nowrap" href="/pricing/#who-does-what">See who does what</a>.</dd></div>
-      </dl>
-      <p class="rich-note"><span class="person__avatar" aria-hidden="true">R</span><span>&ldquo;If you're better off staying where you are, I'll tell you.&rdquo;<span>Rich</span></span></p>
-    </div>
-  </div>
-</section>
 
 <section class="section section--paper" data-section="testimonials" aria-labelledby="reviews-title">
   <div class="container">
     <header class="section-head section-head--split reveal">
       <div>
-        <p class="eyebrow eyebrow--dark"><?= icon('google-logo') ?> Google reviews</p>
-        <h2 class="h2" id="reviews-title">Five stars on Google, in clients' own words</h2>
+        <h2 class="h2" id="reviews-title">What clients say on Google</h2>
       </div>
       <?php if (cfg('reviews_url') !== ''): ?>
         <a class="link-quiet" href="<?= e(cfg('reviews_url')) ?>" rel="noopener" target="_blank" data-cta="reviews-google">See them on Google <?= icon('arrow-up-right') ?></a>
@@ -201,7 +163,6 @@ include APP . '/partials/header.php';
       <h2 class="h2" id="faq-title">Questions people ask before they move</h2>
       <p class="lead lead--dark">Something else on your mind? <a href="tel:<?= e(cfg('phone_e164')) ?>" data-contact="phone">Call me</a> or <a href="<?= e(cfg('whatsapp')) ?>" rel="noopener" target="_blank" data-contact="whatsapp">send a WhatsApp</a>.</p>
       <div class="mini-person">
-        <span class="person__avatar" aria-hidden="true">R</span>
         <span><strong>Ask me directly</strong><span>Usually a same-day reply</span></span>
         <a class="btn btn--ghost btn--sm" href="tel:<?= e(cfg('phone_e164')) ?>" data-contact="phone" data-cta="faq-call"><?= icon('phone') ?> <?= e(cfg('phone_display')) ?></a>
       </div>
@@ -216,19 +177,18 @@ include APP . '/partials/header.php';
   <div class="container enquiry-wrap">
     <div class="enquiry-wrap__intro reveal">
       <h2 class="h2" id="enquiry-title">Tell me what you need</h2>
-      <p class="lead">Moving an existing site or starting from scratch, I'll tell you what I'd do and what it costs. No obligation, no hard sell.</p>
+      <p class="lead">Moving a site or starting from scratch, I'll tell you what I'd do and what it costs. Absolutely no pressure from my end.</p>
     </div>
     <div class="enquiry-wrap__form glass">
       <?php include APP . '/partials/enquiry-form.php'; ?>
     </div>
     <div class="enquiry-wrap__more">
       <div class="person">
-        <span class="person__avatar" aria-hidden="true">R</span>
         <span><strong>Rich</strong><span><?= e(cfg('hours')) ?></span></span>
       </div>
       <ul class="contact-list">
         <li><a href="tel:<?= e(cfg('phone_e164')) ?>" data-contact="phone" data-cta="enquiry-call"><?= icon('phone') ?> <?= e(cfg('phone_display')) ?></a></li>
-        <li><a href="<?= e(cfg('whatsapp')) ?>" rel="noopener" target="_blank" data-contact="whatsapp" data-cta="enquiry-whatsapp"><?= icon('whatsapp-logo') ?> WhatsApp me</a></li>
+        <li><a href="<?= e(cfg('whatsapp')) ?>" rel="noopener" target="_blank" data-contact="whatsapp" data-cta="enquiry-whatsapp"><?= icon('brand-whatsapp') ?> WhatsApp me</a></li>
         <li><a href="mailto:<?= e(cfg('email')) ?>" data-contact="email" data-cta="enquiry-email"><?= icon('envelope-simple') ?> <?= e(cfg('email')) ?></a></li>
       </ul>
       <ol class="mini-steps">

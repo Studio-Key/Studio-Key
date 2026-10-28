@@ -24,8 +24,4 @@ $has_captions = is_file(WEB . '/assets/video/sales-letter.en.vtt');
   <?php endif; ?>
   <div class="chip-float chip-float--a glass" aria-hidden="true"><?= icon('cloud-check') ?><span><strong>Daily backup done</strong><span>Stored on AWS S3</span></span></div>
   <div class="chip-float chip-float--b glass" aria-hidden="true"><?= icon('lock-key') ?><span><strong>SSL renewed for you</strong><span>No charge, ever</span></span></div>
-  <figcaption class="video__caption">
-    <span class="video__avatar" aria-hidden="true">R</span>
-    <span><strong>Rich</strong>, the person who looks after your website</span>
-  </figcaption>
 </figure>

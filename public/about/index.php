@@ -26,7 +26,6 @@ include APP . '/partials/header.php';
 <section class="page-hero section--dark ambient" data-section="about-hero" aria-labelledby="about-title">
   <div class="container about-hero">
     <div class="about-hero__copy">
-      <p class="eyebrow"><?= icon('hand-waving') ?> About me</p>
       <h1 class="h1" id="about-title">Hello, I'm Rich. I look after your website so you don't have to.</h1>
       <p class="lead">I'm an independent website hosting provider in Corby. I host <?= e(cfg('sites_count')) ?> business websites across the East Midlands, and every one of those businesses has my phone number.</p>
       <div class="hero__actions">
@@ -68,7 +67,7 @@ include APP . '/partials/header.php';
     <ul class="values">
       <li>
         <span class="promise__icon"><?= icon('handshake') ?></span>
-        <div><h3 class="h4">In person or on a call</h3><p>Local clients can meet me face to face to get set up. Everyone else, a phone, Teams or Zoom call works as well.</p></div>
+        <div><h3 class="h4">In person or on a call</h3><p>Local clients can meet me face to face to get set up. If you're further away, a phone, Teams or Zoom call does the job.</p></div>
       </li>
       <li>
         <span class="promise__icon"><?= icon('test-tube') ?></span>
