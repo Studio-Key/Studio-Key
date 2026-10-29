@@ -1,0 +1,53 @@
+# Studio Key: LiteSpeed / Apache rules (cPanel). Nginx equivalent: deploy/nginx-site.conf.
+# The site's document root must be .../public so app/, storage/, docs/ and deploy/ are never web-reachable.
+
+Options -Indexes
+DirectoryIndex index.php index.html
+ErrorDocument 404 /404.php
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Preview subdomains (new., dev.) are never indexed, static files included. PHP pages send this too.
+  RewriteCond %{HTTP_HOST} ^(new|dev)\. [NC]
+  RewriteRule ^ - [E=SK_PREVIEW:1]
+
+  # Pretty URLs: /pricing -> /pricing/
+  RewriteRule ^(pricing|about|contact|privacy|terms)$ /$1/ [R=301,L]
+
+  # Block dotfiles except .well-known
+  RewriteRule (^|/)\.(?!well-known/) - [F,L]
+
+  # Never serve source or private files even if the document root is wrong
+  RewriteRule ^(app|storage|docs|deploy|\.git)(/|$) - [F,L]
+  RewriteRule \.(md|lock|log|jsonl|key|example\.php)$ - [F,L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set X-Robots-Tag "noindex, nofollow" env=SK_PREVIEW
+  Header always set X-Robots-Tag "noindex, nofollow" env=REDIRECT_SK_PREVIEW
+  # Security headers for PHP pages come from app/bootstrap.php. Static files get these:
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# Long cache for versioned assets (asset() adds ?v=hash), a week for icons
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType video/mp4 "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 7 days"
+  ExpiresByType application/manifest+json "access plus 7 days"
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/plain text/css application/javascript application/json image/svg+xml application/manifest+json text/xml application/xml
+</IfModule>
+
+# Only the enquiry endpoint takes POST; it checks the method itself (public/api/enquiry.php).

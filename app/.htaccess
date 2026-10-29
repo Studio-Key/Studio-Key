@@ -1,0 +1,2 @@
+# Never web-reachable, even if the document root is set wrong.
+Require all denied

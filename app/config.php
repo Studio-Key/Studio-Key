@@ -6,8 +6,9 @@
 defined('SK_APP') || exit;
 
 return [
-    // 'live' or 'dev'. Dev sends noindex headers. Override with the SK_ENV server variable.
-    'env' => getenv('SK_ENV') ?: 'live',
+    // 'live' or 'dev'. Dev sends noindex headers. Set by the SK_ENV server variable, or automatically
+    // on the new. and dev. preview subdomains so a preview can never be indexed by mistake.
+    'env' => getenv('SK_ENV') ?: (preg_match('/^(new|dev)\./i', (string) ($_SERVER['HTTP_HOST'] ?? '')) ? 'dev' : 'live'),
 
     'url'        => 'https://www.studio-key.co.uk',
     'name'       => 'Studio Key',

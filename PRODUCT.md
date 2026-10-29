@@ -12,6 +12,7 @@ web
 
 1. Impeccable findings and decisions (`/impeccable` commands). They override the PRD and every other doc where they conflict, including the locked homepage copy (PRD section 5) and the design system (PRD section 11). Confirmed by Rich, 28 Oct 2026.
 2. `docs/PRD.md`.
+   Taste Skill (`design-taste-frontend`) is a second design opinion. Where it disagrees with Impeccable, Impeccable wins.
 3. `.claude/skills/studio-key-hosting/SKILL.md`, `docs/voice-and-customers.md`, `docs/page-plan.md`, `docs/seo-plan.md`, `docs/file-plan.md`.
 
 Limits that still hold whatever Impeccable recommends: never invent or change facts, prices, reviews, certifications or claims; never publish anything on the "Banned" or "Do not publish" lists; keep tracking attribute names stable (`docs/file-plan.md` section 6). A copy change still follows the voice rules (British English, first person "I", no em dashes, no "actually").

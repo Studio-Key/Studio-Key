@@ -10,6 +10,19 @@ php -S localhost:8080 -t public deploy/dev-router.php
 
 Open http://localhost:8080. Enquiries go to `storage/leads/` when mail isn't set up.
 
+## Preview on cPanel / LiteSpeed (new.studio-key.co.uk)
+
+Every push to the default branch uploads the site by FTPS (`.github/workflows/deploy-preview.yml`). Run it by hand from the Actions tab to deploy any branch.
+
+One-time setup:
+1. cPanel > Domains > Create a new domain: `new.studio-key.co.uk`. Untick "Share document root" and set the document root to `new.studio-key.co.uk/public`.
+2. cPanel > FTP Accounts: create an account whose directory is `new.studio-key.co.uk` (not `public`). It can only touch the preview.
+3. GitHub > Settings > Secrets and variables > Actions: add `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`. If the first run fails on TLS, add a variable `FTP_PROTOCOL` = `ftp`.
+4. Cloudflare DNS: an A record for `new` pointing at the server, proxied. cPanel AutoSSL then issues the certificate.
+5. Actions tab > Deploy preview > Run workflow.
+
+The preview is noindexed automatically (`app/config.php` treats `new.` and `dev.` hosts as dev). `public/.htaccess` carries the LiteSpeed rules; `app/`, `storage/` and `deploy/` each deny web access as a backstop. The signing key writes itself to `storage/app.key` on first use, so no `secrets.php` is needed until Brevo goes in. Enquiries from the preview are real: they reach help@ and the lead log.
+
 ## First deploy (CloudPanel)
 
 1. Create the site (PHP 8.2+). Set the **root directory** to `.../public`.
